@@ -45,6 +45,9 @@
   align-items: center;
   gap: 2rem;
 }
+.nav_links li {
+  color: var(--secondary-color);
+}
 .nav_links li:hover {
   /* margin-bottom: 2rem */
   border-bottom: 3px solid #fff;
