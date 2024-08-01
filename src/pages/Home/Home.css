@@ -208,3 +208,57 @@
     opacity: 0;
   }
 }
+
+/* Why Section Styling */
+.why_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 40.625em){
+  .why_wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 25em) {
+  .why_wrapper{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+  }
+}
+.why_container{
+  font-size: 1.5rem;
+  display:flex;
+  flex-direction: column;
+} 
+.why_icon{
+  position: relative;
+  transform: translateX(35%) translateY(50%);
+}
+.why_icon svg{
+  width: 7rem;
+  height: 7rem;
+  padding: 1rem;
+  border-radius: 50%;
+  color: antiquewhite;
+  background-color: #000;
+
+}
+.why_text{
+  width: 100%;
+  background-color: #ffc300;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.why_text h1{
+  margin-top: 1.5rem;
+}
+.why_text p{
+  color: #fff;
+}
