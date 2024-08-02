@@ -1,0 +1,33 @@
+.gallery_header{
+    background-image: url(../../);
+}
+.gallery_container{
+    font-size: 1.3rem;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.gallery_wrapper{
+    width: 25rem;
+    /* height: 20rem; */
+    border-radius: 5px;
+    border: 2px solid green;
+    background-color: var(--primary-shade);
+}
+.gallery_info img{
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.gallery_info h1, .gallery_info p{
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.gallery_info h1{
+    text-align: center;
+    color: var(--secondary-shade);
+}
+.gallery_info p{
+    color:#fff;
+    font-weight: 500;
+}

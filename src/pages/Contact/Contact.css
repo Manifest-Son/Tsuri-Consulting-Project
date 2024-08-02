@@ -1,0 +1,76 @@
+:root {
+    --primary-color: #003566;
+    --secondary-color: #ffc300;
+    --primary-font: "Poppins", sans-serif;
+    --secondary-font: "Dancing Script", cursive;
+  }
+.contact_container{
+    font-size: 1.5rem;
+}
+.contact_header{
+    width:100%;
+    height: 25rem;
+    background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(../../assets/contact_us.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+}
+.contact_header h1{
+    font-size: 4rem;
+    color: var(--secondary-color);
+}
+.contact_container h1{
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    color: #fff;
+}
+form{
+    /* border: 3px solid green; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem 4rem;
+    background-color: var(--primary-color);
+}
+.form_contents{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:2rem;
+    margin: 1rem;
+}
+.form_contents label{
+    color: var(--secondary-color);
+    padding: .5rem;
+    font-weight: 600;
+}
+
+.form_contents input{
+    padding: .7rem;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 10px;
+    border-bottom: var(--secondary-color);
+}
+/* .form_contents input::placeholder{
+    color: var(--secondary-color);
+} */
+.contact_container textarea{
+    width: 50%;
+    align-self: center;
+    min-height: 6.25rem;
+}
+.contact_container button{
+    margin-top: 1rem;
+    padding: 1rem;
+    color: var(--primary-shade);
+    background-color: var(--secondary-shade);
+    font-size: 1.7rem;
+    font-weight: 700;
+    border-radius: 15px;
+    width: 50%;
+}
