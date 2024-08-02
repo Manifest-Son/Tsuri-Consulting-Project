@@ -7,7 +7,7 @@ function Header() {
     <React.Fragment>
       <section>
         <div className="header-container">
-          <h1>Pre-Eminent Consulting</h1>
+          <h1>Tsuri Consulting</h1>
           <nav>
             <ol className="nav_links">
               <Link to="/">
