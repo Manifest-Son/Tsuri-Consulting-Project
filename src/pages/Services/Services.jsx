@@ -4,6 +4,7 @@ import leadershipImg from "../../assets/leadership.jpg";
 import academicsImg from "../../assets/academics.jpg";
 import careerImg from "../../assets/career.jpg";
 import { Link } from "react-router-dom";
+import Book from "./Book";
 
 function Services() {
   return (
@@ -61,6 +62,7 @@ function Services() {
               <img src={academicsImg} alt="" />
             </div>
           </div>
+          <Book />
         </div>
       </section>
     </React.Fragment>

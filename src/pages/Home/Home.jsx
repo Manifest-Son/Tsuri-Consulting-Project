@@ -3,6 +3,9 @@ import React from "react";
 import Hero from "./Hero";
 import Why from "./Why";
 import About from "./About";
+import Figures from "./Figures";
+import Testimonial from "./Testimonial";
+import HomeContact from "./Contact";
 
 function Home() {
   return (
@@ -10,6 +13,9 @@ function Home() {
       <Hero />
       <Why />
       <About />
+      <Figures />
+      <Testimonial />
+      <HomeContact />
     </React.Fragment>
   );
 }

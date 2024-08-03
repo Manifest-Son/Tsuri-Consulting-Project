@@ -10,7 +10,7 @@ function Contact() {
           <h1>Contact Us</h1>
         </div>
         <div className="contact_container">
-          <form>
+          <form className="form_container">
             <h1>Reach out to us...</h1>
             <div className="form_contents">
               <div className="form_details">
