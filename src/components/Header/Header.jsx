@@ -27,7 +27,9 @@ function Header() {
               </Link>
             </ol>
           </nav>
-          <button>Get in Touch</button>
+          <button>
+            <Link to="/contact">Get in Touch</Link>
+          </button>
         </div>
       </section>
     </React.Fragment>

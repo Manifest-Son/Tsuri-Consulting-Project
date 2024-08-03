@@ -1,0 +1,95 @@
+:root {
+  --primary-shade: #003566d5;
+  --secondary-shade: #ffc300;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #003566;
+  --secondary-color: #ffc300;
+  --width: 4rem;
+  --height: 4rem;
+}
+.services_header {
+  font-size: 4rem;
+  color: var(--secondary-color);
+  height: 25rem;
+  display: grid;
+  place-content: center;
+  text-transform: uppercase;
+}
+.services_container {
+  font-size: 1.5rem;
+}
+
+.leaders,
+.career,
+.academic {
+  background-color: var(--primary-shade);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+.leadership_txt,
+.academic_txt,
+.career_txt {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.leadership_txt h1,
+.academic_txt h1,
+.career_txt h1 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.leadership_txt p,
+.academic_txt p,
+.career_txt p {
+  color: #fff;
+}
+.leadership_txt button,
+.academic_txt button,
+.career_txt button {
+  padding: 1rem;
+  color: var(--primary-shade);
+  background-color: var(--secondary-shade);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 70%;
+}
+.leadership_txt button:hover,
+.academic_txt button:hover,
+.career_txt button:hover {
+  color: var(--secondary-color);
+  background-color: #fff;
+}
+.leadership_img,
+.academic_img,
+.career_img {
+  width: 50%;
+  height: 50vh;
+}
+.leadership_img img,
+.academic_img img,
+.career_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
+  align-content: center;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.leadership_img img:hover,
+.academic_img img:hover,
+.career_img img:hover {
+  transform: scale(1.1);
+}

@@ -27,25 +27,25 @@
   color: #fff;
 }
 form {
-  /* border: 3px solid green; */
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding: 1rem;
-  margin: 2rem 4rem;
   background-color: var(--primary-color);
 }
 .form_contents {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
-  margin: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 70%;
+  padding: 0.5rem;
 }
-.form_contents label {
+.form_contents label,
+.form_details label {
   color: var(--secondary-color);
+  text-align: center;
   padding: 0.5rem;
   font-weight: 600;
 }
@@ -54,16 +54,24 @@ form {
   padding: 0.7rem;
   color: var(--secondary-color);
   border: none;
+  width: 70%;
   border-radius: 10px;
   border-bottom: var(--secondary-color);
 }
-/* .form_contents input::placeholder{
-    color: var(--secondary-color);
-} */
+.form_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .contact_container textarea {
   width: 50%;
   align-self: center;
   min-height: 6.25rem;
+}
+.form_details button {
+  display: flex;
 }
 .contact_container button {
   margin-top: 1rem;

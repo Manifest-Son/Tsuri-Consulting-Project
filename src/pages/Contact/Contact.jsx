@@ -13,31 +13,34 @@ function Contact() {
           <form>
             <h1>Reach out to us...</h1>
             <div className="form_contents">
-              <div>
+              <div className="form_details">
                 <label htmlFor="">First Name:</label>
                 <input type="text" name="fname" id="fname" />
               </div>
-              <div>
+              <div className="form_details">
                 <label htmlFor="">Last Name:</label>
                 <input type="text" name="lname" id="lname" />
               </div>
             </div>
             <div className="form_contents">
-              <div>
+              <div className="form_details">
                 <label htmlFor="phoneno">Phone Number:</label>
                 <input type="text" name="phoneno" id="phoneno" />
               </div>
-              <div>
+              <div className="form_details">
                 <label htmlFor="">Email Address:</label>
                 <input type="email" name="email" id="email" />
               </div>
             </div>
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Enter your message here."
-            ></textarea>
-            <button>
+            <div className="form_details">
+              <label htmlFor="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter your message here."
+              ></textarea>
+            </div>
+            <button className="form_details">
               <BsSendFill />
               Send
             </button>

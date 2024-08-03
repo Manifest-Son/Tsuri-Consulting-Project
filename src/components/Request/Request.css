@@ -1,0 +1,57 @@
+.request_container {
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+}
+.request_intro {
+  padding: 1rem;
+}
+.request_intro h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.request_intro p {
+  color: #fff;
+}
+.form_section {
+  background-color: var(--primary-color);
+  /* width:70%; */
+}
+.form_input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 70%;
+  padding: 0.5rem;
+}
+.form_input label {
+  text-align: center;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+.form_input input,
+#purpose {
+  padding: 1rem;
+  color: var(--secondary-color);
+  border-radius: 10px;
+  border-bottom: 3px solid var(--secondary-color);
+}
+.details {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+}
+.form_input textarea {
+  height: 10rem;
+}
+.form_section button {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: var(--primary-shade);
+  background-color: var(--secondary-shade);
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 50%;
+}
