@@ -1,6 +1,11 @@
 .request_container {
   font-size: 1.5rem;
   background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 .request_intro {
   padding: 1rem;
@@ -9,20 +14,20 @@
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-color);
 }
 .request_intro p {
   color: #fff;
 }
 .form_section {
   background-color: var(--primary-color);
-  /* width:70%; */
+  /* display: flex; */
+  width:100%;
 }
 .form_input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 70%;
+  width: 100%;
   padding: 0.5rem;
 }
 .form_input label {
@@ -39,7 +44,7 @@
 }
 .details {
   display: flex;
-  width: 70%;
+  width: 100%;
   justify-content: center;
 }
 .form_input textarea {
@@ -53,5 +58,20 @@
   font-size: 1.7rem;
   font-weight: 700;
   border-radius: 15px;
-  width: 50%;
+  width: 100%;
+}
+@media screen and (max-width: 31.25em){
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .form_input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
 }
