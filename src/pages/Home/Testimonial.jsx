@@ -35,13 +35,14 @@ function Testimonial() {
   ];
   return (
     <React.Fragment>
-      <section>
+      <section className="testimonial_section">
         <h1 className="testimonial_header">
           This is what some of our clients have to say
         </h1>
         <div className="testimonial_container">
           {testimonial.map((currentTestimony) => (
             <div key={currentTestimony.id} className="testimonial_wrapper">
+            <p>{currentTestimony.testimony}</p>
               <div className="person">
                 <img
                   src={currentTestimony.img}
@@ -49,7 +50,6 @@ function Testimonial() {
                 />
                 <h1>{currentTestimony.name}</h1>
               </div>
-              <p>{currentTestimony.testimony}</p>
             </div>
           ))}
         </div>

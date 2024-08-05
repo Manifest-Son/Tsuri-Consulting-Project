@@ -6,6 +6,7 @@ import About from "./About";
 import Figures from "./Figures";
 import Testimonial from "./Testimonial";
 import HomeContact from "./Contact";
+import Newsletter from "./Newsletter";
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
       <Figures />
       <Testimonial />
       <HomeContact />
+      <Newsletter />
     </React.Fragment>
   );
 }

@@ -439,11 +439,25 @@
 }
 
 /* Testimonial Section Style */
+.testimonial_section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-shade);
+
+}
+.testimonial_section .testimonial_header{
+  text-transform: uppercase;
+  color: var(--secondary-shade);
+}
 .testimonial_container {
   background-color: var(--primary-shade);
   font-size: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 1.5rem;
   gap: 1.5rem;
 }
@@ -453,27 +467,28 @@
   color: var(--secondary_color);
 }
 .testimonial_wrapper {
+  width: 30rem;
   background-color: var(--secondary-shade);
   border-radius: 10px;
   padding: 1rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: first baseline;
   gap: 1.5rem;
 }
 .person {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 40%;
+  gap: 1rem;
+  width: 50rem;
+  /* width: 40%; */
 }
 .person img {
-  width: 10rem;
-  height: 10rem;
-  border-radius: 10px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
   display: block;
-  /* place-items: center; */
   object-fit: fill;
   overflow: hidden;
 }
@@ -507,22 +522,16 @@
   }
   .person {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 50rem;
   }
   .person img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 10px;
     display: block;
     object-fit: fill;
     overflow: hidden;
   }
   .person h1 {
-    font-size: 1rem;
-    color: var(--primary-shade);
+    /* font-size: 1rem; */
+    /* color: var(--primary-shade); */
     font-weight: 600;
   }
 }
@@ -618,4 +627,41 @@
     justify-content: center;
     align-items: center;
   }
+}
+
+/* Subscribe Section Styling */
+.newsletter_section{
+  display: grid;
+  place-content: center;
+  width: 100%;
+  transform: translateY(3.5rem);
+}
+.newsletter{
+  background-color: var(--primary-shade);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  gap: .5rem;
+  border-radius: 10px;
+}
+.newsletter_input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter_input input, .newsletter_input button{
+  padding: 1rem;
+  border-color: var(--secondary-shade);
+  font-weight: 700;
+  overflow: hidden;
+}
+.newsletter_input input{
+  border-radius: 10px 0  0 10px;
+
+}
+.newsletter_input button{
+  border-radius: 0 10px  10px 0;
 }
