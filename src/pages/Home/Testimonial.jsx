@@ -42,7 +42,7 @@ function Testimonial() {
         <div className="testimonial_container">
           {testimonial.map((currentTestimony) => (
             <div key={currentTestimony.id} className="testimonial_wrapper">
-            <p>{currentTestimony.testimony}</p>
+              <p>{currentTestimony.testimony}</p>
               <div className="person">
                 <img
                   src={currentTestimony.img}

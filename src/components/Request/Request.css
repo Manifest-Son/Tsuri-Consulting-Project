@@ -21,7 +21,7 @@
 .form_section {
   background-color: var(--primary-color);
   /* display: flex; */
-  width:100%;
+  width: 100%;
 }
 .form_input {
   display: flex;
@@ -60,7 +60,7 @@
   border-radius: 15px;
   width: 100%;
 }
-@media screen and (max-width: 31.25em){
+@media screen and (max-width: 31.25em) {
   .details {
     display: flex;
     flex-wrap: wrap;

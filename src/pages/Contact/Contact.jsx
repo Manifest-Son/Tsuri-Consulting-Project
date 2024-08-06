@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import { BsSendFill } from "react-icons/bs";
 import { useFormik } from "formik";
-import * as Yup from 'yup'
+import * as Yup from "yup";
 
 function Contact() {
   const validationSchema = Yup.object({
@@ -10,22 +10,20 @@ function Contact() {
     lastname: Yup.string().required("Please enter your last name"),
     phoneno: Yup.string().required("Please enter your phone number"),
     emailAddress: Yup.string().required("Please enter your email address"),
-    message: Yup.string().required("Please enter your message")
-  })
+    message: Yup.string().required("Please enter your message"),
+  });
 
-  const initialValues = ({
-    firstname: '',
-    lastname: '',
-    phoneno: '',
-    emailAddress: '',
-    message: ''
-  })
+  const initialValues = {
+    firstname: "",
+    lastname: "",
+    phoneno: "",
+    emailAddress: "",
+    message: "",
+  };
 
-  const onSubmit = () => {
+  const onSubmit = () => {};
 
-  }
-
-  const formik = useFormik({initialValues, validationSchema, onSubmit})
+  const formik = useFormik({ initialValues, validationSchema, onSubmit });
   return (
     <React.Fragment>
       <section>
@@ -38,27 +36,61 @@ function Contact() {
             <div className="form_contents">
               <div className="form_details">
                 <label htmlFor="">First Name:</label>
-                <input type="text" name="firstname" id="firstname" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.firstname}/>
-                {formik.touched.firstname && formik.errors.firstname && (<p>{formik.errors.firstname}</p>)}              
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.firstname}
+                />
+                {formik.touched.firstname && formik.errors.firstname && (
+                  <p>{formik.errors.firstname}</p>
+                )}
               </div>
               <div className="form_details">
                 <label htmlFor="">Last Name:</label>
-                <input type="text" name="lastname" id="lastname" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.lastname}/>
-                {formik.touched.lastname && formik.errors.lastname && (<p>{formik.errors.lastname}</p>)}              
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.lastname}
+                />
+                {formik.touched.lastname && formik.errors.lastname && (
+                  <p>{formik.errors.lastname}</p>
+                )}
               </div>
             </div>
             <div className="form_contents">
               <div className="form_details">
                 <label htmlFor="phoneno">Phone Number:</label>
-                <input type="text" name="phoneno" id="phoneno" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.phoneno}/>
-                {formik.touched.phoneno && formik.errors.phoneno && (<p>{formik.errors.phoneno}</p>)}              
-
+                <input
+                  type="text"
+                  name="phoneno"
+                  id="phoneno"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.phoneno}
+                />
+                {formik.touched.phoneno && formik.errors.phoneno && (
+                  <p>{formik.errors.phoneno}</p>
+                )}
               </div>
               <div className="form_details">
                 <label htmlFor="">Email Address:</label>
-                <input type="email" name="emailAddress" id="emailAddress" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.emailAddress}/>
-                {formik.touched.emailAddress && formik.errors.emailAddress && (<p>{formik.errors.emailAddress}</p>)}              
-
+                <input
+                  type="email"
+                  name="emailAddress"
+                  id="emailAddress"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.emailAddress}
+                />
+                {formik.touched.emailAddress && formik.errors.emailAddress && (
+                  <p>{formik.errors.emailAddress}</p>
+                )}
               </div>
             </div>
             <div className="form_details">
@@ -66,14 +98,17 @@ function Contact() {
               <textarea
                 name="message"
                 id="message"
-                onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.message}
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.message}
               ></textarea>
-                {formik.touched.message && formik.errors.message && (<p>{formik.errors.message}</p>)}              
-
+              {formik.touched.message && formik.errors.message && (
+                <p>{formik.errors.message}</p>
+              )}
             </div>
             <button type="submit" className="form_details">
               <BsSendFill />
-              Send 
+              Send
             </button>
           </form>
         </div>

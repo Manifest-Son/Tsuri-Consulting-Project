@@ -4,7 +4,7 @@
   --width: 4rem;
   --height: 4rem;
 }
-body{
+body {
   background-color: var(--primary-shade);
 }
 /* Hero Setion Styling */
@@ -441,14 +441,14 @@ body{
 }
 
 /* Testimonial Section Style */
-.testimonial_section{
+.testimonial_section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--primary-shade);
 }
-.testimonial_section .testimonial_header{
+.testimonial_section .testimonial_header {
   text-transform: uppercase;
   color: var(--secondary-shade);
 }
@@ -603,7 +603,7 @@ body{
 .info p {
   color: #fff;
 }
-.info a{
+.info a {
   text-decoration: none;
   color: #fff;
 }
@@ -635,13 +635,13 @@ body{
 }
 
 /* Subscribe Section Styling */
-.newsletter_section{
+.newsletter_section {
   display: grid;
   place-content: center;
   width: 100%;
   transform: translateY(3.5rem);
 }
-.newsletter{
+.newsletter {
   background-color: var(--primary-shade);
   display: flex;
   justify-content: center;
@@ -649,33 +649,33 @@ body{
   padding: 2rem;
   font-size: 1.5rem;
   color: #fff;
-  gap: .5rem;
+  gap: 0.5rem;
   border-radius: 10px;
 }
-.newsletter_input{
+.newsletter_input {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.newsletter_input input, .newsletter_input button{
+.newsletter_input input,
+.newsletter_input button {
   padding: 1rem;
   border-color: var(--secondary-shade);
   font-weight: 700;
   overflow: hidden;
 }
-.newsletter_input input{
-  border-radius: 10px 0  0 10px;
-
+.newsletter_input input {
+  border-radius: 10px 0 0 10px;
 }
-.newsletter_input button{
-  border-radius: 0 10px  10px 0;
+.newsletter_input button {
+  border-radius: 0 10px 10px 0;
 }
 @media screen and (max-width: 37.5em) {
-  .newsletter_section{
+  .newsletter_section {
     width: 100%;
     transform: translateY(0);
   }
-  .newsletter{
+  .newsletter {
     background-color: var(--primary-shade);
     display: flex;
     flex-wrap: wrap;
@@ -684,6 +684,6 @@ body{
     /* padding: 2rem; */
     font-size: 1.5rem;
     color: #fff;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 }
