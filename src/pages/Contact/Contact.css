@@ -58,6 +58,9 @@
   border-radius: 10px;
   border-bottom: var(--secondary-color);
 }
+#message {
+  color: var(--secondary-color);
+}
 .form_details {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GiPostOffice } from "react-icons/gi";
@@ -6,8 +6,15 @@ import { IoMdMail } from "react-icons/io";
 import { MdLocationPin } from "react-icons/md";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import toast from "react-simple-toasts";
+import "react-simple-toasts/dist/theme/success.css";
+import "react-simple-toasts/dist/theme/failure.css";
+// eslint-disable-next-line no-unused-vars
+import { app, database } from "../../utils/firebase.js";
+import { addDoc, collection } from "firebase/firestore";
 
 function HomeContact() {
+  const [loading, setLoading] = useState(false);
   const validationSchema = Yup.object({
     fullname: Yup.string()
       .required("Please enter your full names")
@@ -23,8 +30,31 @@ function HomeContact() {
     subject: "",
     message: "",
   };
-
-  const onSubmit = () => {};
+  const collectionRef = collection(database, "home_contact");
+  const onSubmit = (values, { resetForm }) => {
+    setLoading(true);
+    try {
+      addDoc(collectionRef, {
+        fullname: values.fullname,
+        phoneno: values.phoneno,
+        subject: values.subject,
+        message: values.message,
+      }).then(() => {
+        toast("Finished successfully. We shall contact you.", {
+          theme: "success",
+          duration: 3000,
+        });
+        resetForm();
+      });
+    } catch (err) {
+      toast("An error occured. Kindly restart the process again.", {
+        theme: "success",
+        duration: 3000,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
 
@@ -36,7 +66,7 @@ function HomeContact() {
             <h1>Contact Us</h1>
             <p>Feel free to contact us for any enquiry.</p>
             <p>As you fill this form, we shall get back to you shortly.</p>
-            <form onSubmit={formik.handleSumbit} className="home_form_contents">
+            <form onSubmit={formik.handleSubmit} className="home_form_contents">
               <label htmlFor="fullname">Full Names: </label>
               <input
                 type="text"
@@ -84,7 +114,10 @@ function HomeContact() {
               {formik.touched.message && formik.errors.message && (
                 <p>{formik.errors.message}</p>
               )}
-              <button type="submit">Send</button>
+              <button type="submit" disabled={loading}>
+                {" "}
+                {loading ? <p>Sending...</p> : <p>Send</p>}
+              </button>
             </form>
           </div>
           <div className="info">

@@ -1,27 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { BsSendFill } from "react-icons/bs";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import toast from "react-simple-toasts";
+import "react-simple-toasts/dist/theme/success.css";
+import "react-simple-toasts/dist/theme/failure.css";
+// eslint-disable-next-line no-unused-vars
+import { app, database } from "../../utils/firebase.js";
+import { addDoc, collection } from "firebase/firestore";
 
 function Contact() {
+  const [loading, setLoading] = useState();
   const validationSchema = Yup.object({
-    firstname: Yup.string().required("Please enter your first name"),
-    lastname: Yup.string().required("Please enter your last name"),
-    phoneno: Yup.string().required("Please enter your phone number"),
-    emailAddress: Yup.string().required("Please enter your email address"),
-    message: Yup.string().required("Please enter your message"),
+    fullname: Yup.string()
+      .required("Please enter your full names")
+      .min(7, "Please write both of your names."),
+    phoneno: Yup.string().required().max(10, "Please input a 10 digit number."),
+    emailAddress: Yup.string()
+      .required()
+      .email("Please enter a vaild email address with correct symbols."),
+    message: Yup.string().required(),
   });
 
   const initialValues = {
-    firstname: "",
-    lastname: "",
+    fullname: "",
     phoneno: "",
     emailAddress: "",
     message: "",
   };
-
-  const onSubmit = () => {};
+  const collectionRef = collection(database, "main_contact");
+  const onSubmit = (values) => {
+    setLoading(true);
+    try {
+      addDoc(collectionRef, {
+        fullname: values.fullname,
+        phoneno: values.phoneno,
+        emailAddress: values.emailAddress,
+        message: values.message,
+      }).then(() => {
+        toast("Your details are collected succesfully. We shall contact you.", {
+          theme: "success",
+          duration: 3000,
+        });
+      });
+    } catch (err) {
+      toast("An error occured. Please refresh", {
+        theme: "failure",
+        duration: 3000,
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
   return (
@@ -35,31 +66,17 @@ function Contact() {
             <h1>Reach out to us...</h1>
             <div className="form_contents">
               <div className="form_details">
-                <label htmlFor="">First Name:</label>
+                <label htmlFor="">Full Name:</label>
                 <input
                   type="text"
-                  name="firstname"
-                  id="firstname"
+                  name="fullname"
+                  id="fullname"
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
-                  value={formik.values.firstname}
+                  value={formik.values.fullname}
                 />
-                {formik.touched.firstname && formik.errors.firstname && (
-                  <p>{formik.errors.firstname}</p>
-                )}
-              </div>
-              <div className="form_details">
-                <label htmlFor="">Last Name:</label>
-                <input
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.lastname}
-                />
-                {formik.touched.lastname && formik.errors.lastname && (
-                  <p>{formik.errors.lastname}</p>
+                {formik.touched.fullname && formik.errors.fullname && (
+                  <p>{formik.errors.fullname}</p>
                 )}
               </div>
             </div>
@@ -89,7 +106,7 @@ function Contact() {
                   value={formik.values.emailAddress}
                 />
                 {formik.touched.emailAddress && formik.errors.emailAddress && (
-                  <p>{formik.errors.emailAddress}</p>
+                  <p>{formik.errors.message}</p>
                 )}
               </div>
             </div>
@@ -106,9 +123,15 @@ function Contact() {
                 <p>{formik.errors.message}</p>
               )}
             </div>
-            <button type="submit" className="form_details">
-              <BsSendFill />
-              Send
+            <button type="submit" className="form_details" disabled={loading}>
+              {loading ? (
+                <p>Sending...</p>
+              ) : (
+                <>
+                  <BsSendFill />
+                  Send
+                </>
+              )}
             </button>
           </form>
         </div>
