@@ -9,6 +9,7 @@ import Gallery from "./pages/Gallery/Gallery";
 import Contact from "./pages/Contact/Contact";
 import AboutUs from "./pages/Home/AboutUs";
 import Request from "./components/Request/Request";
+import BookDisplay from "./components/Book/BookDisplay";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/request" element={<Request />} />
+          <Route path="/book" element={<BookDisplay />} />
         </Routes>
         <Footer />
       </BrowserRouter>

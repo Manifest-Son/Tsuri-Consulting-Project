@@ -1,10 +1,10 @@
 :root {
-  --primary-shade: #0456a3d5;
+  --primary-shade: #9370db;
   --secondary-shade: #ffc300;
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Dancing Script", cursive;
-  --primary-color: #003566;
-  --secondary-color: #ffc300;
+  --primary-color: #6a0dad;
+  --secondary-color: #daa520;
   --width: 4rem;
   --height: 4rem;
 }

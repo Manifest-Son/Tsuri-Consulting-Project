@@ -1,5 +1,5 @@
 :root {
-  --blue_gradient: #015099;
+  --purple_gradient: #9370db;
   --gold_gradient: #e9c617;
 }
 
@@ -22,7 +22,7 @@
   font-size: 4rem;
 }
 .schedule_wrapper {
-  background-color: var(--blue_gradient);
+  background-color: var(--purple_gradient);
 }
 .schedule_wrapper h1 {
   font-size: 3rem;

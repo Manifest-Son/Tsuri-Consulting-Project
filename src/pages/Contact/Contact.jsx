@@ -30,7 +30,7 @@ function Contact() {
     message: "",
   };
   const collectionRef = collection(database, "main_contact");
-  const onSubmit = (values) => {
+  const onSubmit = (values, { resetForm }) => {
     setLoading(true);
     try {
       addDoc(collectionRef, {
@@ -43,6 +43,7 @@ function Contact() {
           theme: "success",
           duration: 3000,
         });
+        resetForm();
       });
     } catch (err) {
       toast("An error occured. Please refresh", {
