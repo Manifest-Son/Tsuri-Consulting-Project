@@ -1,36 +1,26 @@
 import React from "react";
 import "./Home.css";
-import studentImg from "../../assets/student.png";
-import studentsImg from "../../assets/students.png";
-import graduateImg from "../../assets/graduate.png";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
     <React.Fragment>
       <section>
         <div className="about_container">
-          <div className="about_img">
-            <img src={studentImg} alt="Fresh man" className="img_1" />
-            <img
-              src={graduateImg}
-              alt="Graduation ceremony"
-              className="img_3"
-            />
-            <img
-              src={studentsImg}
-              alt="students in a group"
-              className="img_2"
-            />
-          </div>
           <div className="about_us_txt">
             <h1>About Us</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-              sed accusantium similique officiis dolorum sunt aperiam, tenetur,
-              commodi consequuntur nulla non expedita perferendis pariatur
-              libero inventore distinctio qui consequatur repellat.
+              Tsuri Consulting Limited is a consulting firm that is specialized
+              to mentor, nature and grow the current generation into present
+              people who are resposible in whatever they do. Them committed
+              under us shall be qualified in the future to become prominent
+              people who are qualified in character and non-negotiable
+              standards. They shall love people and help to take the work to the
+              world in the possibilities it can offer.
             </p>
-            <button>Learn More &rarr;</button>
+            <button>
+              <Link to="/about">Learn More &rarr;</Link>
+            </button>
           </div>
         </div>
       </section>

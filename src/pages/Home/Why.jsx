@@ -18,11 +18,11 @@ function Why() {
               <TbBriefcaseFilled />
             </div>
             <div className="why_text">
-              <h1>Lorem</h1>
+              <h2>Always Ready</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                quos commodi quaerat exercitationem recusandae tempore culpa
-                earum dolore eius quidem.
+                When service calls we hit the road. We carry personel and tools
+                that are ready for the neccesary task needed from us by our
+                clients.
               </p>
             </div>
           </div>
@@ -32,11 +32,12 @@ function Why() {
               <BsTools />
             </div>
             <div className="why_text">
-              <h1>Lorem</h1>
+              <h2>Equipped</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                quos commodi quaerat exercitationem recusandae tempore culpa
-                earum dolore eius quidem.
+                Work is never done witthout the specifie tools. We believe that
+                we have all it takes to commit to our vision. Such include
+                books, great minds with the non-renewable resources such as time
+                to build students.
               </p>
             </div>
           </div>
@@ -46,11 +47,12 @@ function Why() {
               <BsFire />
             </div>
             <div className="why_text">
-              <h1>Lorem</h1>
+              <h2>Passionate</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                quos commodi quaerat exercitationem recusandae tempore culpa
-                earum dolore eius quidem.
+                A burning desire within us to see the lives of our brethren
+                change through the services we offer. Career, academic, and
+                leadership mentorship are areas when they are properly
+                adddressed, we believe it shall skyrocket our worlds growth.
               </p>
             </div>
           </div>
@@ -60,11 +62,13 @@ function Why() {
               <RiTimerLine />
             </div>
             <div className="why_text">
-              <h1>Lorem</h1>
+              <h2>Experienced</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                quos commodi quaerat exercitationem recusandae tempore culpa
-                earum dolore eius quidem.
+                Experience is a teacher away from the noraml teaching. From the
+                vairous services we have offered to our cliets, whe have been
+                ever growing and leveraging to offer the best services when
+                called upon to. We refine and polish what is already there to be
+                understood by many.
               </p>
             </div>
           </div>
@@ -76,7 +80,7 @@ function Why() {
 
 // function Why(){
 //     <section>
-//         <h1>Why they opt us...</h1>
+//         <h2>Why they opt us...</h2>
 //         {why.map((currentWhy) =>(
 //             <DisplayWhy
 //             key = {currentWhy.id}

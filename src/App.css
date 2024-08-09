@@ -10,9 +10,13 @@
   --secondary-font: "Dancing Script", cursive;
   --primary-color: #6a0dad;
   --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
 }
 
 html {
   font-size: 62.5%;
   font-family: var(--primary-font);
+  /* max-width: 1200px; */
 }

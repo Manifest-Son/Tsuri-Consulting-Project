@@ -16,11 +16,13 @@ function Contact() {
     fullname: Yup.string()
       .required("Please enter your full names")
       .min(7, "Please write both of your names."),
-    phoneno: Yup.string().required().max(10, "Please input a 10 digit number."),
+    phoneno: Yup.string()
+      .required("Phone number is required")
+      .max(10, "Please input a 10 digit number."),
     emailAddress: Yup.string()
-      .required()
+      .required("Email Address is required")
       .email("Please enter a vaild email address with correct symbols."),
-    message: Yup.string().required(),
+    message: Yup.string().required("Your message is required"),
   });
 
   const initialValues = {
@@ -31,6 +33,12 @@ function Contact() {
   };
   const collectionRef = collection(database, "main_contact");
   const onSubmit = (values, { resetForm }) => {
+    if (values === null) {
+      return toast("Please enter valid inputs", {
+        theme: "failure",
+        duration: 3000,
+      });
+    }
     setLoading(true);
     try {
       addDoc(collectionRef, {
@@ -58,7 +66,7 @@ function Contact() {
   const formik = useFormik({ initialValues, validationSchema, onSubmit });
   return (
     <React.Fragment>
-      <section>
+      <section className="contact_section">
         <div className="contact_header">
           <h1>Contact Us</h1>
         </div>
@@ -107,7 +115,7 @@ function Contact() {
                   value={formik.values.emailAddress}
                 />
                 {formik.touched.emailAddress && formik.errors.emailAddress && (
-                  <p>{formik.errors.message}</p>
+                  <p>{formik.errors.emailAddress}</p>
                 )}
               </div>
             </div>

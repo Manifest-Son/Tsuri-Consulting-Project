@@ -1,9 +1,13 @@
 :root {
-  --primary-shade: #9370db;
-  --secondary-shade: #ffc300;
-  --width: 4rem;
-  --height: 4rem;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
 }
+
 body {
   background-color: var(--primary-shade);
 }
@@ -118,11 +122,11 @@ body {
   padding: 2rem;
 }
 .why_section h1 {
-  padding-top: 1rem;
+  margin-top: 3.5rem;
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-shade);
+  color: var(--primary-color);
 }
 .why_wrapper {
   display: flex;
@@ -145,6 +149,7 @@ body {
   }
 }
 .why_container {
+  width: 40rem;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -174,95 +179,31 @@ body {
 
 /* About Section Styling */
 .about_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(../../assets/aboutus.avif);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
   background-color: var(--primary-shade);
   padding: 1rem;
   font-size: 1.5rem;
 }
-.about_img {
-  width: 60%;
-}
 .about_us_txt {
   padding: 1rem;
-  width: 40%;
-  text-align: right;
-  padding-right: 2rem;
-}
-.img_1,
-.img_2,
-.img_3 {
-  width: 25rem;
-  height: 25rem;
-  border-radius: 50%;
-  overflow-x: hidden;
-}
-@media screen and (max-width: 40.625em) {
-  .about_container {
-    /* position: relative; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .about_img {
-    width: 100%;
-  }
-  .about_us_txt {
-    padding: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-  .img_1,
-  .img_2,
-  .img_3 {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    overflow-x: hidden;
-  }
-}
-
-.img_1 {
-  position: relative;
-  left: 10%;
-  top: 20%;
-}
-.img_2 {
-  position: relative;
-  top: 70%;
-  /* bottom: 10%; */
-  left: 40%;
-}
-.img_3 {
-  position: relative;
-  left: 30%;
-  top: 20%;
-}
-@media screen and (max-width: 40.625em) {
-  .about_img {
-    position: relative;
-    width: 100%;
-  }
-  .img_1 {
-    position: relative;
-    left: 8%;
-  }
-  .img_2 {
-    position: relative;
-    left: 25%;
-  }
-  .img_3 {
-    position: relative;
-    left: 15%;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 .about_us_txt h1 {
   font-size: 3rem;
   text-transform: uppercase;
+  color: var(--secondary-color);
 }
 .about_us_txt p {
+  text-align: center;
   font-size: 2rem;
   color: #fff;
   padding-top: 1rem;
@@ -270,7 +211,6 @@ body {
 }
 
 /* Figures Section Style */
-/* Planning to make it responsive */
 .figures_container {
   width: 100%;
   background-color: var(--primary-shade);
@@ -576,4 +516,90 @@ body {
     color: #fff;
     gap: 0.5rem;
   }
+}
+
+/* About Us Page Styling */
+.aboutus_container {
+  font-size: 1.5rem;
+}
+.leadership_header {
+  background-image: url(../../assets/about_bg.avif);
+  font-size: 3rem;
+  height: 25rem;
+  display: grid;
+  place-content: center;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+.leadership {
+  display: flex;
+  height: 50vh;
+  padding: 1rem;
+  overflow: hidden;
+}
+.leadership blockquote {
+  color: #fff;
+  padding: 1rem;
+}
+.leadership_text {
+  width: 70%;
+  display: grid;
+  place-content: center;
+  padding: 2rem;
+}
+.leadership_text h1 {
+  color: var(--secondary-color);
+}
+.leadership_about_img {
+  height: 50rem;
+  overflow: hidden;
+}
+.leadership_about_img img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  object-fit: cover;
+}
+.vision,
+.mission,
+.what_we_do {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 25rem;
+}
+.vision svg,
+.mission svg,
+.what_we_do svg {
+  color: var(--secondary-color);
+  height: 10rem;
+  width: 10rem;
+  width: 30%;
+}
+.vision svg:hover,
+.mission svg:hover,
+.what_we_do svg:hover {
+  color: #fff;
+}
+.leadership_vision,
+.leadership_mission,
+.leaderhip_what_we_do {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.leadership_vision h2,
+.leadership_mission h2,
+.leaderhip_what_we_do h2 {
+  color: var(--secondary-shade);
+}
+.leadership_vision p,
+.leadership_mission p,
+.leaderhip_what_we_do p {
+  color: #fff;
 }

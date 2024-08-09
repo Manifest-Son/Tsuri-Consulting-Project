@@ -1,25 +1,34 @@
 :root {
-  --primary-shade: #9370db;
-  --secondary-shade: #ffc300;
   --primary-font: "Poppins", sans-serif;
   --secondary-font: "Dancing Script", cursive;
   --primary-color: #6a0dad;
-  --secondary-color: #daa520;
-  --width: 4rem;
-  --height: 4rem;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
 }
-.services_header {
+.services_section {
+  margin: 0 2rem;
+}
+.services_section h1 {
   font-size: 4rem;
-  color: var(--secondary-color);
-  height: 25rem;
-  display: grid;
-  place-content: center;
   text-transform: uppercase;
+  color: var(--primary-color);
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 3rem;
 }
 .services_container {
+  background: var(--purple_gradient);
   font-size: 1.5rem;
+  border-radius: 10px;
 }
-
+.services_container h3 {
+  background: var(--gold_gradient);
+  text-align: center;
+  padding: 3rem;
+  color: #fff;
+}
 .leaders,
 .career,
 .academic {
@@ -40,9 +49,9 @@
   align-items: center;
   gap: 1.5rem;
 }
-.leadership_txt h1,
-.academic_txt h1,
-.career_txt h1 {
+.leadership_txt h2,
+.academic_txt h2,
+.career_txt h2 {
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -57,12 +66,12 @@
 .academic_txt button,
 .career_txt button {
   padding: 1rem;
-  color: var(--primary-shade);
-  background-color: var(--secondary-shade);
+  color: var(--primary-color);
+  background: var(--gold_gradient);
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 15px;
-  width: 70%;
+  /* width: 70%; */
 }
 .leadership_txt button:hover,
 .academic_txt button:hover,
@@ -124,12 +133,15 @@
 }
 
 /* Book Section Styling */
+.book_section h1 {
+  color: var(--secondary-color);
+}
 .book_container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 3rem;
+  padding: 2rem;
   background-color: var(--primary-shade);
   border-radius: 20px;
   margin: 2rem;
@@ -160,20 +172,14 @@
   align-items: center;
   gap: 2rem;
 }
-.book_review h1 {
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  color: var(--secondary-color);
-}
-.book_review h3 {
+.book_review h2 {
   font-family: var(--secondary-font);
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
-  text-decoration: double underline;
 }
 .book_review p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--secondary-color);
   font-weight: 600;
 }
