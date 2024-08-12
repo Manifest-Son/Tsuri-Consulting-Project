@@ -1,7 +1,7 @@
 import React from "react";
 import "./Services.css";
 import leadershipImg from "../../assets/leadership.jpg";
-import academicsImg from "../../assets/academics.jpg";
+import academicsImg from "../../assets/Academics.jpg";
 import careerImg from "../../assets/career.jpg";
 import { Link } from "react-router-dom";
 import Book from "./Book";
