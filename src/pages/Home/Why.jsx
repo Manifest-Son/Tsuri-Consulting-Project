@@ -11,7 +11,7 @@ function Why() {
   return (
     <React.Fragment>
       <section className="why_section">
-        <h1 className="why_title">Why they choose us...</h1>
+        <h1>Why they choose us...</h1>
         <div className="why_wrapper">
           <div className="why_container">
             <div className="why_icon">
@@ -67,8 +67,7 @@ function Why() {
                 Experience is a teacher away from the noraml teaching. From the
                 vairous services we have offered to our cliets, whe have been
                 ever growing and leveraging to offer the best services when
-                called upon to. We refine and polish what is already there to be
-                understood by many.
+                called upon to.
               </p>
             </div>
           </div>
@@ -77,19 +76,4 @@ function Why() {
     </React.Fragment>
   );
 }
-
-// function Why(){
-//     <section>
-//         <h2>Why they opt us...</h2>
-//         {why.map((currentWhy) =>(
-//             <DisplayWhy
-//             key = {currentWhy.id}
-//             icon = {currentWhy.icon}
-//             title={currentWhy.title}
-//             text={currentWhy.text}
-//             />
-//         ))}
-//     </section>
-// }
-
 export default Why;

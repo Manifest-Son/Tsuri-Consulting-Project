@@ -11,13 +11,15 @@ import Newsletter from "./Newsletter";
 function Home() {
   return (
     <React.Fragment>
-      <Hero />
-      <Why />
-      <About />
-      <Figures />
-      <Testimonial />
-      <HomeContact />
-      <Newsletter />
+      <section className="home_section">
+        <Hero />
+        <Why />
+        <About />
+        <Figures />
+        <Testimonial />
+        <HomeContact />
+        <Newsletter />
+      </section>
     </React.Fragment>
   );
 }

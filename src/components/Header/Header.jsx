@@ -7,7 +7,9 @@ function Header() {
     <React.Fragment>
       <section>
         <div className="header-container">
-          <h1>Tsuri Consulting</h1>
+          <Link to="/">
+            <h1>Tsuri Consulting</h1>
+          </Link>
           <nav>
             <ol className="nav_links">
               <Link to="/">
@@ -27,9 +29,9 @@ function Header() {
               </Link>
             </ol>
           </nav>
-          <button>
-            <Link to="/contact">Get in Touch</Link>
-          </button>
+          <Link to="/contact">
+            <button>Get in Touch</button>
+          </Link>
         </div>
       </section>
     </React.Fragment>

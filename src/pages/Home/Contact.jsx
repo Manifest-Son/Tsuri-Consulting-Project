@@ -130,7 +130,7 @@ function HomeContact() {
               <a href="tel:+254710626463">+254710626463</a>
             </p>
             <p>
-              <IoMdMail /> info@preeminentconsulting.co.ke
+              <IoMdMail /> info@tsuriconsulting.co.ke
             </p>
             <p>
               <GiPostOffice /> P.O.Box 7202-00100 Nairobi, Kenya

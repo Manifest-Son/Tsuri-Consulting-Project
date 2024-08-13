@@ -11,7 +11,7 @@ function Hero() {
   const slideDuration = 5000;
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -43,7 +43,7 @@ function Hero() {
           <div
             className="progress"
             style={{
-              width: `${((currentSlide + 1) % 3) * 33.33}%`,
+              width: `${((currentSlide + 1) % 3) * 35}%`,
               transition: `width ${slideDuration}ms linear`,
             }}
           />
@@ -54,14 +54,14 @@ function Hero() {
               <h1>Tsuri Consultants Limited</h1>
               <h3>Services you can trust</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet excepturi ipsa nulla quia aliquid recusandae magni. Iste
-                deleniti tenetur, in adipisci magnam eveniet iusto, est ullam ad
-                quis eligendi nostrum.
+                As a consulting firm we are hooured to work with every client
+                irregadless of the status quo to bring our skill set and
+                experience to impact the current generation. We value people
+                more and this makes us on top.
               </p>
-              <button>
-                <Link to="/about">Learn More &rarr;</Link>
-              </button>
+              <Link to="/about">
+                <button>Learn More &rarr;</button>
+              </Link>
             </div>
           </div>
 
@@ -70,14 +70,13 @@ function Hero() {
               <h1>Tsuri Consultants Limited</h1>
               <h3>Want us near you?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet excepturi ipsa nulla quia aliquid recusandae magni. Iste
-                deleniti tenetur, in adipisci magnam eveniet iusto, est ullam ad
-                quis eligendi nostrum.
+                We are always available to any request from our clients to offer
+                them our service. We are strong to make you strong. Click on the
+                button below to book us to come to you.
               </p>
-              <button>
-                <Link to="/about">Book Us &rarr;</Link>
-              </button>
+              <Link to="/about">
+                <button>Book Us &rarr;</button>
+              </Link>
             </div>
           </div>
 
@@ -86,14 +85,15 @@ function Hero() {
               <h1>Tsuri Consultants Limited</h1>
               <h3>Book Knowledge</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Eveniet excepturi ipsa nulla quia aliquid recusandae magni. Iste
-                deleniti tenetur, in adipisci magnam eveniet iusto, est ullam ad
-                quis eligendi nostrum.
+                Books carry a wealth of knowledge. Man is destroyed because of
+                lack of knowledge or in short, ignorance. From our experience
+                and our heart to reaveal how to make it through in the higher
+                institutions, we have written a book that reveals it all and it
+                is affordable to purchase. Click to order the book.
               </p>
-              <button>
-                <Link to="/about">Book Store &rarr;</Link>
-              </button>
+              <Link to="/about">
+                <button>Book Store &rarr;</button>
+              </Link>
             </div>
           </div>
         </Slider>

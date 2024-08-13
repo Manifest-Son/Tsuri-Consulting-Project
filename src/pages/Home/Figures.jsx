@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from "react-countup";
 import "./Home.css";
 
 function Figures() {
@@ -10,19 +11,19 @@ function Figures() {
           <h3>The journey continues...</h3>
           <div className="top_figure">
             <p>
-              20+ <br /> Schools Visited
+              <CountUp end={20} duration={5} />+<br /> Schools Visited
             </p>
             <p>
-              500+ <br /> Students Impacted
+              <CountUp end={500} duration={5} />+<br /> Students Impacted
             </p>
             <p>
-              2+ <br /> Experience
+              <CountUp end={2} duration={5} />+<br /> Experience
             </p>
             <p>
-              10+ <br /> Schools Visited
+              <CountUp end={10} duration={5} />+<br /> Schools Visited
             </p>
             <p>
-              1000+ <br /> Students Impacted
+              <CountUp end={10000} duration={5} />+<br /> Students Impacted
             </p>
           </div>
         </div>

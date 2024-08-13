@@ -12,25 +12,25 @@ function Testimonial() {
       img: johnImg,
       name: "John Doe",
       testimony:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium? Veritatis unde numquam ab maiores? Quam!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium?",
     },
     {
       img: allanImg,
       name: "Allan Kelvin",
       testimony:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium? Veritatis unde numquam ab maiores? Quam!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium?",
     },
     {
       img: rebeccaImg,
       name: "Rebecca Dawn",
       testimony:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium? Veritatis unde numquam ab maiores? Quam!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium?",
     },
     {
       img: steveImg,
       name: "Steve Jobs",
       testimony:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium? Veritatis unde numquam ab maiores? Quam!",
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Assumenda, eum ipsum debitis ducimus corporis dolor voluptatem, utsit sequi repellendus possimus exercitationem eaque laudantium?",
     },
   ];
   return (
@@ -40,13 +40,13 @@ function Testimonial() {
           This is what some of our clients have to say
         </h1>
         <div className="testimonial_container">
-          {testimonial.map((currentTestimony) => (
-            <div key={currentTestimony.id} className="testimonial_wrapper">
+          {testimonial.map((currentTestimony, i) => (
+            <div key={i} className="testimonial_wrapper">
               <p>{currentTestimony.testimony}</p>
               <div className="person">
                 <img
                   src={currentTestimony.img}
-                  alt="This displays a client who is giving their remarks"
+                  alt="This displays a client who is giving their testimony."
                 />
                 <h1>{currentTestimony.name}</h1>
               </div>

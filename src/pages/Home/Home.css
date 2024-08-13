@@ -9,13 +9,18 @@
 }
 
 body {
-  background-color: var(--primary-shade);
+  /* background: var(--purple_gradient); */
+  width: 100%;
+}
+/* Home Page Styling */
+.home_section {
+  background: var(--purple_gradient);
 }
 /* Hero Setion Styling */
 .carousel {
   position: relative;
+  /* margin-top: 2rem; */
   width: 100%;
-  /* height: 70vh; */
   overflow: hidden;
 }
 .carousel_nav {
@@ -39,7 +44,7 @@ body {
   outline: 2px solid #000;
 }
 .progress-bar {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,7 +54,7 @@ body {
 
 .progress {
   height: 100%;
-  background-color: var(--secondary-shade);
+  background-color: var(--primary-color);
 }
 .hero_container,
 .hero_container_1,
@@ -86,12 +91,12 @@ body {
 }
 .hero_text h1 {
   font-size: 5rem;
-  color: var(--secondary-shade);
+  color: var(--secondary-color);
 }
 .hero_text h3 {
   font-size: 3rem;
   font-family: var(--secondary-font);
-  color: #fff;
+  color: var(--secondary-color);
 }
 .hero_text p {
   font-size: 1.8rem;
@@ -100,30 +105,111 @@ body {
 }
 .hero_text button,
 .about_us_txt button {
+  text-decoration: none;
   margin-top: 1rem;
   padding: 1rem;
-  color: var(--primary-shade);
+  color: var(--secondary-color);
   background-color: var(--secondary-shade);
   font-size: 1.7rem;
   font-weight: 700;
   border-radius: 15px;
   width: 20rem;
-  text-decoration: inherit;
 }
 .hero_text button:hover,
 .about_us_txt button:hover {
   color: #fff;
   background-color: var(--secondary-shade);
 }
+@media screen and (max-width: 46.875em) {
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+  }
+  .hero_container,
+  .hero_container_1,
+  .hero_container_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+  }
+  .hero_text {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  .hero_text h1 {
+    font-size: 4rem;
+    color: var(--secondary-color);
+  }
+  .hero_text h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+  }
+  .hero_text p {
+    font-size: 1rem;
+  }
+  .hero_text button {
+    color: var(--secondary-color);
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 15px;
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 31.25em) {
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 38vh;
+  }
+  .hero_container,
+  .hero_container_1,
+  .hero_container_2 {
+    width: 100%;
+    height: 38vh;
+  }
+  .hero_text {
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+  }
+  .hero_text h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+  }
+  .hero_text h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+  .hero_text p {
+    font-size: 1rem;
+  }
+  .hero_text button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 15px;
+    width: 10rem;
+  }
+}
 
 /* Why Section Styling */
 .why_section {
-  background-color: var(--primary-color);
-  padding: 2rem;
+  background: var(--gold_gradient);
+  padding: 1rem;
 }
 .why_section h1 {
-  margin-top: 3.5rem;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--primary-color);
@@ -132,24 +218,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-}
-@media screen and (max-width: 40.625em) {
-  .why_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-@media screen and (max-width: 25em) {
-  .why_wrapper {
-    display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;
-  }
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 .why_container {
-  width: 40rem;
+  background: var(--purple_gradient);
+  width: 23rem;
+  height: 30vh;
+  border-radius: 20px;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -163,18 +239,53 @@ body {
   height: 7rem;
   padding: 1rem;
   border-radius: 50%;
-  color: antiquewhite;
+  background: var(--gold_gradient);
+  color: var(--primary-color);
   background-color: #000;
 }
 .why_text {
   width: 100%;
-  background-color: #ffc300;
   text-align: center;
-  padding-bottom: 1rem;
-  border-radius: 10px;
+  margin-top: 2.5rem;
+  padding: 1rem;
 }
 .why_text p {
   color: #fff;
+}
+
+@media screen and (max-width: 46.875em) {
+  .why_section h1 {
+    font-size: 2rem;
+  }
+  .why_wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  .why_container {
+    background: var(--purple_gradient);
+    width: 25rem;
+    height: 25vh;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 25em) {
+  .why_section h1 {
+    font-size: 1.5rem;
+  }
+  .why_wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+  .why_container {
+    background: var(--purple_gradient);
+    width: 20rem;
+    height: 20vh;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* About Section Styling */
@@ -184,7 +295,6 @@ body {
   background-size: cover;
   display: grid;
   place-content: center;
-  background-color: var(--primary-shade);
   padding: 1rem;
   font-size: 1.5rem;
 }
@@ -224,9 +334,9 @@ body {
   padding: 2rem;
 }
 .figures_container h1 {
-  /* font-size: 2.2rem; */
+  font-size: 3rem;
   text-transform: uppercase;
-  color: var(--secondary-shade);
+  color: var(--secondary-color);
 }
 .figures_container h3 {
   font-size: 3rem;
@@ -235,7 +345,7 @@ body {
   color: #fff;
 }
 .figures_container p {
-  background-color: var(--secondary-shade);
+  background: var(--gold_gradient);
   border-radius: 10px;
   text-align: center;
   padding: 1rem;
@@ -278,45 +388,47 @@ body {
   align-items: center;
   background: var(--purple_gradient);
 }
-.testimonial_section .testimonial_header {
+.testimonial_header {
+  font-size: 3rem;
   text-transform: uppercase;
-  color: var(--secondary-shade);
+  color: var(--secondary-color);
 }
 .testimonial_container {
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
   gap: 1.5rem;
 }
 .testimonial_header {
   font-size: 2rem;
   text-align: center;
-  color: var(--secondary_color);
+  color: var(--secondary-color);
 }
 .testimonial_wrapper {
-  width: 30rem;
+  width: 20rem;
+  height: 25vh;
   background: var(--gold_gradient);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: baseline;
   align-items: first baseline;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .person {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 50rem;
-  /* width: 40%; */
+  padding: 0.5rem;
+  width: 20rem;
 }
 .person img {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   display: block;
   object-fit: fill;
@@ -324,7 +436,7 @@ body {
 }
 .person h1 {
   font-size: 1.5rem;
-  color: var(--primary-shade);
+  color: var(--primary-color);
   font-weight: 600;
 }
 .testimonial_wrapper p {
@@ -333,16 +445,11 @@ body {
 @media screen and (max-width: 62.5em) {
   .testimonial_container {
     background-color: var(--primary-shade);
-    font-size: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    width: 100%;
+    font-size: 1.3rem;
   }
   .testimonial_wrapper {
+    width: 38rem;
+    height: 14vh;
     background-color: var(--secondary-shade);
     border-radius: 10px;
     padding: 1rem;
@@ -353,6 +460,7 @@ body {
   .person {
     display: flex;
     width: 50rem;
+    padding: 0;
   }
   .person img {
     display: block;
@@ -374,21 +482,22 @@ body {
   align-items: center;
   font-size: 1.5rem;
   gap: 2rem;
-  padding: 1rem;
+  padding: 2rem;
 }
 .contact h1 {
+  font-size: 2rem;
+  text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-shade);
+  color: var(--secondary-color);
 }
 .contact p {
   color: #fff;
   font-family: var(--secondary-font);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .home_form_contents {
   display: flex;
   flex-direction: column;
-  /* gap: 1rem; */
 }
 .home_form_contents label {
   color: var(--secondary-color);
@@ -423,7 +532,7 @@ body {
   justify-content: baseline;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 .info h1 {
   text-transform: uppercase;
@@ -441,7 +550,7 @@ body {
   height: 2rem;
   color: var(--secondary-shade);
 }
-@media screen and (max-width: 25em) {
+@media screen and (max-width: 37.5em) {
   .home_contact_container {
     background-color: var(--primary-shade);
     display: flex;
@@ -465,13 +574,11 @@ body {
 
 /* Subscribe Section Styling */
 .newsletter_section {
-  display: grid;
-  place-content: center;
   width: 100%;
-  transform: translateY(3.5rem);
+  /* transform: translateY(4rem); */
 }
 .newsletter {
-  background : var(--gold_gradient);
+  background: var(--gold_gradient);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,7 +596,7 @@ body {
 .newsletter_input input,
 .newsletter_input button {
   padding: 1rem;
-  border-color: var(--secondary-shade);
+  border: 3px solid var(--secondary-shade);
   font-weight: 700;
   overflow: hidden;
 }
@@ -510,7 +617,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* padding: 2rem; */
     font-size: 1.5rem;
     color: #fff;
     gap: 0.5rem;

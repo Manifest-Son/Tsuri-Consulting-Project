@@ -18,9 +18,9 @@ function About() {
               standards. They shall love people and help to take the work to the
               world in the possibilities it can offer.
             </p>
-            <button>
-              <Link to="/about">Learn More &rarr;</Link>
-            </button>
+            <Link to="/about">
+              <button>Learn More &rarr;</button>
+            </Link>
           </div>
         </div>
       </section>
