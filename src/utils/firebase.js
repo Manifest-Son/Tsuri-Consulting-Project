@@ -14,7 +14,7 @@ const firebaseConfig = {
   measurementId: "G-9P5FCCZYKL",
 };
 
-console.log({ firebaseConfig });
+// console.log({ firebaseConfig });
 
 export const app = initializeApp(firebaseConfig);
 // export const analytics = getAnalytics(app);

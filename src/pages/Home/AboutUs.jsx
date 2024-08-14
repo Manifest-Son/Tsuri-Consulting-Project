@@ -7,17 +7,19 @@ import founderImg from "../../assets/Founder.png";
 function AboutUs() {
   return (
     <React.Fragment>
-      <section>
+      <section className="aboutus_section">
+        <h1 className="leadership_header">About Us</h1>
         <div className="aboutus_container">
-          <h1 className="leadership_header">About Us</h1>
           <div className="leadership">
             <div className="leadership_text">
               <h1>Hear what our founder has to say.</h1>
               <blockquote>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Nesciunt eaque nulla omnis totam, recusandae impedit labore
-                velit voluptatibus animi expedita dolor blanditiis vitae
-                cupiditate eos. Qui atque voluptates ab quidem!
+                Welcome to Tsuri Consultsnta. We pioneer in leadership, academic
+                and career development. Being the founder and the Chief
+                Executive Officer of the Consulting firm, i can assure you of
+                our excellence when it comes to our job. We value everyone that
+                allow us to offer our services to them. <br /> You can trust on
+                us.
               </blockquote>
               <h2>
                 <i>- Phoebe Muruga</i>
@@ -32,7 +34,7 @@ function AboutUs() {
             <div className="leadership_vision">
               <h2>Vision</h2>
               <p>
-                Provide thw generation with the necessary tools to meet the
+                Provide the generation with the necessary tools to meet the
                 world and overcome every obstacle.
               </p>
             </div>

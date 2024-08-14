@@ -10,7 +10,7 @@ function DisplayGallery({ img, title, description }) {
         <div className="gallery_wrapper">
           <div className="gallery_info">
             <img src={img} alt="" />
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{description}</p>
           </div>
         </div>
@@ -21,10 +21,8 @@ function DisplayGallery({ img, title, description }) {
 
 function Gallery() {
   return (
-    <section>
-      <div className="gallery_header">
-        <h1>Gallery</h1>
-      </div>
+    <section className="gallery_section">
+      <h1>Gallery</h1>
       <div className="gallery_container">
         {gallery.map((currentImg) => (
           <DisplayGallery

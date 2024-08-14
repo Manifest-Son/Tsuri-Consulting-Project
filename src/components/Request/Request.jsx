@@ -18,7 +18,9 @@ export default function Request() {
     firstname: Yup.string().required("Please enter your name"),
     lastname: Yup.string().required("Please enter your last name"),
     phoneno: Yup.string().required("Please enter phone number"),
-    emailAddress: Yup.string().required("Please enter your email address"),
+    emailAddress: Yup.string()
+      .required("Please enter your email address")
+      .email("Please enter a valid Email Address."),
     purpose: Yup.string().required(
       "Please enter the service you would require from us.",
     ),
@@ -72,61 +74,69 @@ export default function Request() {
           <div className="request_intro">
             <h1>Book Us</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad dolor
-              provident minima molestias non exercitationem! Nemo, alias itaque
-              autem doloremque pariatur ex id odit cum?
+              Welcome to booking us to offer our services to you. Kindly fill
+              the form below and we shall get in touch with you in a short and
+              plan the plans. Thank you.
             </p>
           </div>
           <div className="form_section">
             <form onSubmit={formik.handleSubmit}>
-              <div className="details">
-                <div className="form_input">
-                  <label htmlFor="firstname">First Name:</label>
-                  <input
-                    type="text"
-                    name="firstname"
-                    id="firstname"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={formik.values.firstname}
-                  />
-                </div>
-                <div className="form_input">
-                  <label htmlFor="lastname">Last Name:</label>
-                  <input
-                    type="text"
-                    name="lastname"
-                    id="lastname"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={formik.values.lastname}
-                  />
-                </div>
+              <div className="form_input">
+                <label htmlFor="firstname">First Name:</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="firstname"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.firstname}
+                />
               </div>
-              <div className="details">
-                <div className="form_input">
-                  <label htmlFor="lastname">Phone No:</label>
-                  <input
-                    type="text"
-                    name="phoneno"
-                    id="phoneno"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={formik.values.phoneno}
-                  />
-                </div>
-                <div className="form_input">
-                  <label htmlFor="emailAddress">Email Address:</label>
-                  <input
-                    type="email"
-                    name="emailAddress"
-                    id="emailAddress"
-                    onBlur={formik.handleBlur}
-                    onChange={formik.handleChange}
-                    value={formik.values.emailAddress}
-                  />
-                </div>
+              {formik.touched.firstname && formik.errors.firstname && (
+                <p>{formik.errors.firstname}</p>
+              )}
+              <div className="form_input">
+                <label htmlFor="lastname">Last Name:</label>
+                <input
+                  type="text"
+                  name="lastname"
+                  id="lastname"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.lastname}
+                />
               </div>
+              {formik.touched.lastname && formik.errors.lastname && (
+                <p>{formik.errors.lastname}</p>
+              )}
+              <div className="form_input">
+                <label htmlFor="lastname">Phone No:</label>
+                <input
+                  type="text"
+                  name="phoneno"
+                  id="phoneno"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.phoneno}
+                />
+              </div>
+              {formik.touched.phoneno && formik.errors.phoneno && (
+                <p>{formik.errors.phoneno}</p>
+              )}
+              <div className="form_input">
+                <label htmlFor="emailAddress">Email Address:</label>
+                <input
+                  type="email"
+                  name="emailAddress"
+                  id="emailAddress"
+                  onBlur={formik.handleBlur}
+                  onChange={formik.handleChange}
+                  value={formik.values.emailAddress}
+                />
+              </div>
+              {formik.touched.emailAddress && formik.errors.emailAddress && (
+                <p>{formik.errors.emailAddress}</p>
+              )}
               <div className="form_input">
                 <label htmlFor="selectdate">When you need us to come</label>
                 <input
@@ -136,8 +146,12 @@ export default function Request() {
                   onBlur={formik.handleBlur}
                   onChange={formik.handleChange}
                   value={formik.values.selectdate}
+                  min={new Date().toISOString().split("T")[0]}
                 />
               </div>
+              {formik.touched.selectdate && formik.errors.selectdate && (
+                <p>{formik.errors.selectdate}</p>
+              )}
               <div className="form_input">
                 <label htmlFor="purpose">What would you want us to do?</label>
                 <select
@@ -157,6 +171,9 @@ export default function Request() {
                   </option>
                 </select>
               </div>
+              {formik.touched.purpose && formik.errors.purpose && (
+                <p>{formik.errors.purpose}</p>
+              )}
               <button type="submit" disabled={loading}>
                 {loading ? (
                   <p>Sending...</p>

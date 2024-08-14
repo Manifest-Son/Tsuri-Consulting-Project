@@ -9,26 +9,27 @@
 }
 
 /* Header Styling */
-.gallery_header {
-  /* background-image: url(../../assets/schedule.png); */
+.gallery_section {
+  font-size: 2rem;
+  color: var(--primary-color);
   text-align: center;
-  padding: 2rem;
-  /* margin-bottom: 3rem; */
+  text-transform: uppercase;
+  padding: 3rem;
 }
 
 .gallery_header h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--purple_gradient);
 }
 
 /* Container Styling */
 .gallery_container {
-  background-color: var(--purple_gradient);
-  /* border: 2px solid green; */
-  padding: 1rem;
+  background: var(--purple_gradient);
+  border: 2px solid green;
   border-radius: 15px;
   font-size: 1.3rem;
-  margin: 1rem;
+  margin: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -39,17 +40,13 @@
 /* Wrapper for each gallery item */
 .gallery_wrapper {
   width: 100%;
+  min-height: 45vh;
   max-width: 25rem;
   border-radius: 10px;
   border: 2px solid var(--primary-color);
   background-color: var(--primary-shade);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
-}
-
-.gallery_wrapper:hover {
-  transform: scale(1.05);
 }
 
 /* Image styling within each gallery item */
@@ -60,9 +57,16 @@
   object-fit: cover;
   transition: transform 0.5s ease;
 }
-
+.gallery_wrapper h2 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+.gallery_wrapper p {
+  text-transform: capitalize;
+}
 .gallery_info img:hover {
-  transform: scale(1.5); /* *Enhanced image hover effect* */
+  transform: scale(1.1);
+  overflow: hidden;
 }
 
 /* Text Styling within each gallery item */
@@ -88,12 +92,18 @@
 
 /* Responsive Design */
 @media screen and (max-width: 43.75em) {
+  .gallery_container {
+    marging: 1rem;
+  }
   .gallery_wrapper {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 31.25em) {
+  .gallery_container {
+    marging: 1rem;
+  }
   .gallery_header h1 {
     font-size: 2.5rem;
   }

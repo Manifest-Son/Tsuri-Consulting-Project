@@ -16,6 +16,7 @@ body {
 .home_section {
   background: var(--purple_gradient);
 }
+
 /* Hero Setion Styling */
 .carousel {
   position: relative;
@@ -224,9 +225,9 @@ body {
 .why_container {
   background: var(--purple_gradient);
   width: 23rem;
-  height: 30vh;
+  height: 47vh;
   border-radius: 20px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
 }
@@ -624,17 +625,21 @@ body {
 }
 
 /* About Us Page Styling */
+.aboutus_section {
+  margin: 1rem;
+}
 .aboutus_container {
   font-size: 1.5rem;
+  background: var(--purple_gradient);
+  border-radius: 15px;
 }
 .leadership_header {
-  background-image: url(../../assets/about_bg.avif);
+  /* background-image: url(../../assets/about_bg.avif); */
   font-size: 3rem;
-  height: 25rem;
-  display: grid;
-  place-content: center;
+  /* height: 25rem; */
+  text-align: center;
   text-transform: uppercase;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 .leadership {
   display: flex;
@@ -653,6 +658,9 @@ body {
   padding: 2rem;
 }
 .leadership_text h1 {
+  color: var(--secondary-color);
+}
+.leadership_text h2 {
   color: var(--secondary-color);
 }
 .leadership_about_img {
@@ -701,7 +709,7 @@ body {
 .leadership_vision h2,
 .leadership_mission h2,
 .leaderhip_what_we_do h2 {
-  color: var(--secondary-shade);
+  color: var(--secondary-color);
 }
 .leadership_vision p,
 .leadership_mission p,

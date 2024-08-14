@@ -1,6 +1,16 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
+}
+
 .request_container {
   font-size: 1.5rem;
-  background-color: var(--primary-color);
+  background: var(--purple_gradient);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,21 +24,24 @@
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
+  color: var(--secondary-color);
 }
 .request_intro p {
   color: #fff;
 }
 .form_section {
-  background-color: var(--primary-color);
-  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  border: 2px solid green;
 }
 .form_input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .form_input label {
   text-align: center;
@@ -37,16 +50,18 @@
 }
 .form_input input,
 #purpose {
+  margin-left: 1rem;
+  width: 40rem;
   padding: 1rem;
   color: var(--secondary-color);
   border-radius: 10px;
   border-bottom: 3px solid var(--secondary-color);
 }
-.details {
+/* .details {
   display: flex;
   width: 100%;
   justify-content: center;
-}
+} */
 .form_input textarea {
   height: 10rem;
 }
@@ -59,6 +74,10 @@
   font-weight: 700;
   border-radius: 15px;
   width: 100%;
+}
+.form_section button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 @media screen and (max-width: 31.25em) {
   .details {
