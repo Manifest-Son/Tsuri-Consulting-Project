@@ -225,7 +225,7 @@ body {
 .why_container {
   background: var(--purple_gradient);
   width: 23rem;
-  height: 47vh;
+  height: 23vh;
   border-radius: 20px;
   font-size: 1.3rem;
   display: flex;
@@ -254,7 +254,7 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width: 46.875em) {
+@media screen and (max-width: 62.5em) {
   .why_section h1 {
     font-size: 2rem;
   }
@@ -395,6 +395,7 @@ body {
   color: var(--secondary-color);
 }
 .testimonial_container {
+  text-align: center;
   font-size: 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -410,7 +411,7 @@ body {
 }
 .testimonial_wrapper {
   width: 20rem;
-  height: 25vh;
+  max-height: 15vh;
   background: var(--gold_gradient);
   border-radius: 10px;
   padding: 0.5rem;
