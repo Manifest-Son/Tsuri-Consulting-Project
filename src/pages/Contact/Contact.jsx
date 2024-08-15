@@ -72,52 +72,48 @@ function Contact() {
         </div>
         <div className="contact_container">
           <form onSubmit={formik.handleSubmit} className="form_container">
-            <h1>Reach out to us...</h1>
-            <div className="form_contents">
-              <div className="form_details">
-                <label htmlFor="">Full Name:</label>
-                <input
-                  type="text"
-                  name="fullname"
-                  id="fullname"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.fullname}
-                />
-                {formik.touched.fullname && formik.errors.fullname && (
-                  <p>{formik.errors.fullname}</p>
-                )}
-              </div>
+            <h2>Reach out to us...</h2>
+            <div className="form_details">
+              <label htmlFor="">Full Name:</label>
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.fullname}
+              />
+              {formik.touched.fullname && formik.errors.fullname && (
+                <p>{formik.errors.fullname}</p>
+              )}
             </div>
-            <div className="form_contents">
-              <div className="form_details">
-                <label htmlFor="phoneno">Phone Number:</label>
-                <input
-                  type="text"
-                  name="phoneno"
-                  id="phoneno"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.phoneno}
-                />
-                {formik.touched.phoneno && formik.errors.phoneno && (
-                  <p>{formik.errors.phoneno}</p>
-                )}
-              </div>
-              <div className="form_details">
-                <label htmlFor="">Email Address:</label>
-                <input
-                  type="email"
-                  name="emailAddress"
-                  id="emailAddress"
-                  onBlur={formik.handleBlur}
-                  onChange={formik.handleChange}
-                  value={formik.values.emailAddress}
-                />
-                {formik.touched.emailAddress && formik.errors.emailAddress && (
-                  <p>{formik.errors.emailAddress}</p>
-                )}
-              </div>
+            <div className="form_details">
+              <label htmlFor="phoneno">Phone Number:</label>
+              <input
+                type="text"
+                name="phoneno"
+                id="phoneno"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.phoneno}
+              />
+              {formik.touched.phoneno && formik.errors.phoneno && (
+                <p>{formik.errors.phoneno}</p>
+              )}
+            </div>
+            <div className="form_details">
+              <label htmlFor="">Email Address:</label>
+              <input
+                type="email"
+                name="emailAddress"
+                id="emailAddress"
+                onBlur={formik.handleBlur}
+                onChange={formik.handleChange}
+                value={formik.values.emailAddress}
+              />
+              {formik.touched.emailAddress && formik.errors.emailAddress && (
+                <p>{formik.errors.emailAddress}</p>
+              )}
             </div>
             <div className="form_details">
               <label htmlFor="message">Message:</label>

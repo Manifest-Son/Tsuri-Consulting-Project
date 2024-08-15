@@ -24,9 +24,9 @@ function Gallery() {
     <section className="gallery_section">
       <h1>Gallery</h1>
       <div className="gallery_container">
-        {gallery.map((currentImg) => (
+        {gallery.map((currentImg, i) => (
           <DisplayGallery
-            key={currentImg.id}
+            key={i}
             img={currentImg.img}
             title={currentImg.title}
             description={currentImg.description}

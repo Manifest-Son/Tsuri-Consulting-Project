@@ -225,7 +225,7 @@ body {
 .why_container {
   background: var(--purple_gradient);
   width: 23rem;
-  height: 23vh;
+  height: 33rem;
   border-radius: 20px;
   font-size: 1.3rem;
   display: flex;
@@ -265,7 +265,7 @@ body {
   .why_container {
     background: var(--purple_gradient);
     width: 25rem;
-    height: 25vh;
+    height: 30rem;
     font-size: 1.2rem;
     display: flex;
     flex-direction: column;
@@ -280,12 +280,28 @@ body {
     gap: 1rem;
   }
   .why_container {
+    margin-top: 0;
     background: var(--purple_gradient);
     width: 20rem;
-    height: 20vh;
+    height: 21rem;
     font-size: 1rem;
     display: flex;
     flex-direction: column;
+  }
+  .why_icon {
+    position: relative;
+    transform: translateX(35%) translateY(30%);
+  }
+  .why_icon svg {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.6rem;
+  }
+  .why_text {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
   }
 }
 
@@ -411,7 +427,7 @@ body {
 }
 .testimonial_wrapper {
   width: 20rem;
-  max-height: 15vh;
+  height: 19rem;
   background: var(--gold_gradient);
   border-radius: 10px;
   padding: 0.5rem;
@@ -420,6 +436,9 @@ body {
   justify-content: baseline;
   align-items: first baseline;
   gap: 1rem;
+}
+.testimonial_container p {
+  margin-top: 1rem;
 }
 .person {
   display: flex;
@@ -451,13 +470,16 @@ body {
   }
   .testimonial_wrapper {
     width: 38rem;
-    height: 14vh;
+    height: 19rem;
     background-color: var(--secondary-shade);
     border-radius: 10px;
     padding: 1rem;
     display: flex;
     gap: 1rem;
     max-width: 30rem;
+  }
+  .testimonial_container p {
+    margin-top: 1rem;
   }
   .person {
     display: flex;

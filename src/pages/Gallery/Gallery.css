@@ -40,7 +40,7 @@
 /* Wrapper for each gallery item */
 .gallery_wrapper {
   width: 100%;
-  min-height: 45vh;
+  min-height: 30rem;
   max-width: 25rem;
   border-radius: 10px;
   border: 2px solid var(--primary-color);
@@ -51,7 +51,7 @@
 
 /* Image styling within each gallery item */
 .gallery_info img {
-  height: 100%;
+  height: 10rem;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -59,7 +59,7 @@
 }
 .gallery_wrapper h2 {
   color: var(--secondary-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .gallery_wrapper p {
   text-transform: capitalize;
@@ -91,27 +91,77 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 43.75em) {
+@media screen and (max-width: 62.5em) {
+  .gallery_section {
+    padding: 0.5rem;
+  }
   .gallery_container {
-    marging: 1rem;
+    background: var(--purple_gradient);
+    font-size: 1.3rem;
+    gap: 2rem;
   }
   .gallery_wrapper {
-    width: 90%;
+    width: 100%;
+    min-height: 20rem;
+    max-width: 20rem;
+  }
+  .gallery_header h1 {
+    font-size: 2rem;
+  }
+  .gallery_info h2 {
+    font-size: 1.5rem;
+  }
+  .gallery_info p {
+    font-size: 1.3rem;
   }
 }
 
 @media screen and (max-width: 31.25em) {
+  .gallery_section {
+    padding: 0.5rem;
+  }
   .gallery_container {
-    marging: 1rem;
+    background: var(--purple_gradient);
+    font-size: 1.3rem;
+    gap: 2rem;
+  }
+  .gallery_wrapper {
+    width: 100%;
+    min-height: 15rem;
+    max-width: 15rem;
   }
   .gallery_header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
-
-  .gallery_info h1 {
+  .gallery_info h2 {
     font-size: 1.3rem;
   }
+  .gallery_info p {
+    font-size: 1rem;
+  }
+}
 
+@media screen and (max-width: 25em) {
+  .gallery_section {
+    padding: 0.5rem;
+  }
+  .gallery_container {
+    background: var(--purple_gradient);
+    border-radius: 15px;
+    font-size: 1.3rem;
+    gap: 2rem;
+  }
+  .gallery_wrapper {
+    width: 100%;
+    min-height: 15rem;
+    max-width: 12rem;
+  }
+  .gallery_header h1 {
+    font-size: 2rem;
+  }
+  .gallery_info h2 {
+    font-size: 1.3rem;
+  }
   .gallery_info p {
     font-size: 1rem;
   }
