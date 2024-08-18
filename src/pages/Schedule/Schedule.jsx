@@ -27,7 +27,6 @@ function DisplaySchedule({ venue, description, date, location }) {
           </div>
         </div>
       </div>
-      {/* Repeat event_card for more events */}
     </React.Fragment>
   );
 }

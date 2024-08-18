@@ -10,6 +10,8 @@ import Contact from "./pages/Contact/Contact";
 import AboutUs from "./pages/Home/AboutUs";
 import Request from "./components/Request/Request";
 import BookDisplay from "./components/Book/BookDisplay";
+import Admin from "./pages/Admin/Admin";
+import UpdateGallery from "./pages/Admin/Galleria/UpdateGallery";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/request" element={<Request />} />
           <Route path="/book" element={<BookDisplay />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/update/:id" element={<UpdateGallery />} />
         </Routes>
         <Footer />
       </BrowserRouter>

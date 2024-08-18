@@ -1,0 +1,110 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
+}
+/* Admin Styling */
+.admin_wrapper {
+  display: flex;
+  gap: 3rem;
+}
+.sidenav {
+  width: 20%;
+}
+.side_content {
+  width: 80%;
+}
+.sidenav_wrapper {
+  background: var(--purple_gradient);
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100vh;
+  float: left;
+  /* position: static; */
+}
+.sidenav_links {
+  text-align: center;
+  color: #ffffff;
+  padding: 1rem;
+}
+.sidenav_links li {
+  display: flex;
+  text-transform: uppercase;
+  padding: 2rem;
+  /* border: 2px solid green; */
+}
+.sidenav_links li:hover {
+  color: #fff;
+  cursor: pointer;
+  background: var(--gold_gradient);
+}
+.sidenav_links .icon {
+  width: 40%;
+  display: grid;
+  place-content: center;
+}
+.sidenav_links .title {
+  width: 60%;
+}
+
+/* Dashboard Styling */
+.dashboard_section {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: var(--purple_gradient);
+}
+.top_content {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.subcribers,
+.gallery,
+.responses,
+.booking {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: 20rem;
+  height: 10rem;
+  border: 2px solid green;
+  border-radius: 10px;
+  background: var(--gold_gradient);
+  color: #fff;
+}
+.subcribers h1,
+.gallery h1,
+.responses h1,
+.booking h1 {
+  text-transform: uppercase;
+}
+.bottom_content {
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 1rem;
+  border: 2px solid green;
+}
+/* Table Styling */
+.bottom_content h1 {
+  text-align: center;
+}
+.bottom_content table {
+  width: 100%;
+  border: 2px solid gold;
+}
+.bottom_content th {
+  border: 1px solid var(--secondary-color);
+  margin: 1rem;
+}
+.bottom_content td {
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  /* margin: 1rem; */
+}

@@ -1,0 +1,57 @@
+/* Galleria Styling */
+.galleria_section,
+.updategallery_section {
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: var(--purple_gradient);
+}
+.galleria_wrapper {
+}
+.galleria_wrapper form,
+.update_wrapper form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 70%;
+  gap: 1rem;
+}
+.galleria_wrapper label,
+.update_wrapper label {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+.galleria_wrapper input,
+.update_wrapper input {
+  padding: 0.7rem;
+  border-radius: 10px;
+  border: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.galleria_wrapper textarea,
+.update_wrapper textarea {
+  min-height: 7rem;
+  font-family: var(--primary-font);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  border: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+}
+.galleria_wrapper button,
+.update_wrapper button {
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 700;
+  color: var(--secondary-shade);
+  background: var(--secondary-color);
+}
+.galleria_wrapper button:hover,
+.update_wrapper button:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+/* UpdateGallery Styling */
+.update_wrapper {
+}

@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 // import { config } from 'dotenv'
 import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBkP9NZE9e0bBCxMcSE4HoUxyYwwmDdvNQ",
@@ -19,3 +20,4 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 // export const analytics = getAnalytics(app);
 export const database = getFirestore(app);
+export const storage = getStorage(app);
