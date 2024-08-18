@@ -126,7 +126,6 @@ export default function UpdateGallery() {
             }}
             aria-label="Insert the image"
           />
-          {/* {formik.touched.picture && formik.errors.picture && <p>{formik.errors.picture}</p>} */}
 
           <label htmlFor="title">Image Title</label>
           <input

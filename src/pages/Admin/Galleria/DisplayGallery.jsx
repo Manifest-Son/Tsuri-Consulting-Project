@@ -50,7 +50,7 @@ function FetchGallery() {
   }, []);
 
   const handleUpdate = (id) => {
-    navigate(`/update/${id}`);
+    navigate(`/gallery/update/${id}`);
   };
 
   const handleDelete = async (id) => {

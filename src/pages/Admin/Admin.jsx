@@ -1,9 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import SideNav from "./SideNav";
-import AddGallery from "./Galleria/AddGallery";
-// import UpdateGallery from './Galleria/UpdateGallery'
-import FetchGallery from "./Galleria/DisplayGallery";
+import AddSchedule from "./Schedule/AddSchedule";
+import DisplayScheduler from "./Schedule/DisplaySchedule";
 
 function Admin() {
   return (
@@ -14,9 +13,8 @@ function Admin() {
             <SideNav />
           </div>
           <div className="side_content">
-            <AddGallery />
-            <FetchGallery />
-            {/* <UpdateGallery /> */}
+            <AddSchedule />
+            <DisplayScheduler />
           </div>
         </div>
       </section>

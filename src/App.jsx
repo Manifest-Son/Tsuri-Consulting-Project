@@ -12,6 +12,7 @@ import Request from "./components/Request/Request";
 import BookDisplay from "./components/Book/BookDisplay";
 import Admin from "./pages/Admin/Admin";
 import UpdateGallery from "./pages/Admin/Galleria/UpdateGallery";
+import UpdateSchedule from "./pages/Admin/Schedule/UpdateSchedule";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
           <Route path="/request" element={<Request />} />
           <Route path="/book" element={<BookDisplay />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/update/:id" element={<UpdateGallery />} />
+          <Route path="gallery/update/:id" element={<UpdateGallery />} />
+          <Route path="schedule/update/:id" element={<UpdateSchedule />} />
         </Routes>
         <Footer />
       </BrowserRouter>
