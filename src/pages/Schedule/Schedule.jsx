@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Schedule.css";
 import { GoDotFill } from "react-icons/go";
 import { MdEvent } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { database } from "../../utils/firebase.js";
+import { collection, onSnapshot } from "firebase/firestore";
+import toast from "react-simple-toasts";
+import "react-simple-toasts/dist/theme/success.css";
+import "react-simple-toasts/dist/theme/failure.css";
 
 // eslint-disable-next-line react/prop-types
 function DisplaySchedule({ venue, description, date, location }) {
@@ -32,43 +37,28 @@ function DisplaySchedule({ venue, description, date, location }) {
 }
 
 function Schedule() {
-  const schedule = [
-    {
-      venue: "Muranga High School",
-      description:
-        "Muranga High we shall have leadership mentorship session and this sha;ll be made available through the help of the Muranga High Administration.",
-      date: "29th August 2024",
-      location: "Muranga, Kiharu",
-    },
-    {
-      venue: "Muranga High School",
-      description:
-        "Muranga High we shall have leadership mentorship session and this sha;ll be made available through the help of the Muranga High Administration.",
-      date: "29th August 2024",
-      location: "Muranga, Kiharu",
-    },
-    {
-      venue: "Muranga High School",
-      description:
-        "Muranga High we shall have leadership mentorship session and this sha;ll be made available through the help of the Muranga High Administration.",
-      date: "29th August 2024",
-      location: "Muranga, Kiharu",
-    },
-    {
-      venue: "Muranga High School",
-      description:
-        "Muranga High we shall have leadership mentorship session and this sha;ll be made available through the help of the Muranga High Administration.",
-      date: "29th August 2024",
-      location: "Muranga, Kiharu",
-    },
-    {
-      venue: "Muranga High School",
-      description:
-        "Muranga High we shall have leadership mentorship session and this sha;ll be made available through the help of the Muranga High Administration.",
-      date: "29th August 2024",
-      location: "Muranga, Kiharu",
-    },
-  ];
+  const [fetch, setFetch] = useState([]);
+
+  useEffect(() => {
+    const fetchGallery = async () => {
+      try {
+        await onSnapshot(collection(database, "schedule"), (snapshot) => {
+          const items = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setFetch(items);
+        });
+      } catch {
+        toast("Error fetching gallery ", {
+          theme: "success",
+          duration: 3000,
+        });
+      }
+    };
+
+    fetchGallery();
+  }, []);
   return (
     <section className="schedule_section">
       <div className="schedule_container">
@@ -79,10 +69,10 @@ function Schedule() {
           <h1>Upcoming Events</h1>
           <p className="subtitle">We could be near you...</p>
           <div className="schedule_events">
-            {schedule.map((currentSchedule) => (
+            {fetch.map((currentSchedule) => (
               <DisplaySchedule
                 key={currentSchedule.id}
-                venue={currentSchedule.venue}
+                venue={currentSchedule.event}
                 description={currentSchedule.description}
                 date={currentSchedule.date}
                 location={currentSchedule.location}

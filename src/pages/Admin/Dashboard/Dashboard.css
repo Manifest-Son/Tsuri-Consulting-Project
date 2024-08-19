@@ -1,0 +1,101 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_color: #9370db;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
+}
+
+/* HomeContact Styling */
+.homecontact_section {
+  border: 2px solid green;
+  font-size: 1.6rem;
+  background: var(--purple_color);
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+.homecontact_table tr:nth-child(even),
+.maincontact_table tr:nth-child(even) {
+  background: var(--primary-color);
+}
+.homecontact_table tr.read td,
+.maincontact_table tr.read td {
+  text-decoration: line-through;
+  color: gray;
+}
+.homecontact_section h1,
+.maincontact_section h1 {
+  text-align: center;
+  color: var(--secondary-color);
+}
+.homecontact_table thead,
+.maincontact_table thead {
+  column-span: 4;
+  border: 2px solid var(--secondary-color);
+}
+.homecontact_table th,
+.maincontact_table th {
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 0.3rem;
+  color: var(--secondary-color);
+}
+.homecontact_table td,
+.maincontact_table td {
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-shade);
+  padding: 0.5rem;
+}
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.read_btn,
+.delete_btn {
+  font-weight: 700;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.read_btn {
+  background-color: blue;
+  color: var(--secondary-shade);
+}
+.read_btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--secondary-shade);
+}
+.delete_btn {
+  background-color: red;
+  color: var(--secondary-shade);
+}
+.delete_btn:hover {
+  color: var(--secondary-color);
+  background-color: var(--secondary-shade);
+}
+
+/* MainContact Styling  */
+.maincontact_section {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  background: var(--purple_color);
+  border-collapse: collapse;
+}
+
+/* Subscription Styling */
+.subscription_section {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+  background: var(--purple_color);
+}
+.subscription_table {
+  border: 2px solid var(--secondary-color);
+  border-radius: 10px;
+}

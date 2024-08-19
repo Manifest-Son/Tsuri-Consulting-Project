@@ -1,8 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import SideNav from "./SideNav";
-import AddSchedule from "./Schedule/AddSchedule";
-import DisplayScheduler from "./Schedule/DisplaySchedule";
+// import AddSchedule from "./Schedule/AddSchedule";
+// import DisplayScheduler from "./Schedule/DisplaySchedule";
+import HomeContact from "./Dashboard/HomeContact";
+import MainContact from "./Dashboard/MainContact";
+import Subscribe from "./Dashboard/Subscribe";
 
 function Admin() {
   return (
@@ -13,8 +16,11 @@ function Admin() {
             <SideNav />
           </div>
           <div className="side_content">
-            <AddSchedule />
-            <DisplayScheduler />
+            <HomeContact />
+            <MainContact />
+            <Subscribe />
+            {/* // <AddSchedule /> */}
+            {/* // <DisplayScheduler /> */}
           </div>
         </div>
       </section>

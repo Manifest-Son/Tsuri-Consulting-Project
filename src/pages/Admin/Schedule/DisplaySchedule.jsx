@@ -11,7 +11,6 @@ import toast from "react-simple-toasts";
 import "react-simple-toasts/dist/theme/success.css";
 import "react-simple-toasts/dist/theme/failure.css";
 
-
 function DisplayScheduler({
   id,
   event,
@@ -53,16 +52,13 @@ function FetchSchedule() {
   useEffect(() => {
     const fetchSchedules = async () => {
       try {
-        const snapshot = await onSnapshot(
-          collection(database, "schedule"),
-          (snapshot) => {
-            const items = snapshot.docs.map((doc) => ({
-              id: doc.id,
-              ...doc.data(),
-            }));
-            setScheduleFetch(items);
-          },
-        );
+        await onSnapshot(collection(database, "schedule"), (snapshot) => {
+          const items = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+          setScheduleFetch(items);
+        });
       } catch {
         toast("Error fetching schedules ", {
           theme: "success",
