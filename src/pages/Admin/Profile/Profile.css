@@ -1,0 +1,67 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
+}
+
+/* Admin Profile Styling */
+.profile_wrapper {
+  display: grid;
+  place-content: center;
+  font-size: 1.6rem;
+}
+.profile_wrapper form {
+  display: flex;
+  width: 70rem;
+  background: var(--purple_gradient);
+  border-radius: 15px;
+  margin: 2rem;
+}
+.profile_wrapper label {
+  color: var(--secondary-color);
+}
+.profile_wrapper input {
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  border: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+.profile_wrapper button {
+  background: var(--gold_gradient);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 50%;
+  cursor: pointer;
+}
+.profile_wrapper button:hover {
+  background: var(--primary-color);
+  color: var(--secondary-shade);
+}
+.profile_img {
+  border: 2px solid green;
+  width: 100%;
+  padding: 2rem;
+}
+.profile_img img {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid green;
+  width: 100%;
+  padding: 2rem;
+}

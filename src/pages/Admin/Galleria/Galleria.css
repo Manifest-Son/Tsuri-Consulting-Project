@@ -55,3 +55,62 @@
 /* UpdateGallery Styling */
 .update_wrapper {
 }
+
+/* Display Gallery Styling */
+.galleria_section {
+  padding: 0;
+  background: var(--gold_gradient);
+}
+.galleria_section h1 {
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+.galleria_btn {
+  background: var(--secondary-shade);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 15%;
+  float: right;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.galleria_display {
+  width: 30rem;
+  min-height: 35rem;
+  /* border: 2px solid green; */
+  font-size: 1.6rem;
+  text-align: center;
+  background: var(--purple_gradient);
+  border-radius: 10px;
+}
+.galleria_display img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.galleria_display h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+.galleria_display p {
+  color: var(--secondary-shade);
+}
+.operations {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.galleria_wrapper {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  /* border: 2px solid green; */
+}

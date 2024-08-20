@@ -146,7 +146,7 @@ function UpdateSchedule() {
               disabled={isSubmitting}
               aria-busy={isSubmitting}
             >
-              {isSubmitting ? "Adding Event" : "Add Event"}
+              {isSubmitting ? "Updating Event" : "Update Event"}
             </button>
           </form>
         </div>

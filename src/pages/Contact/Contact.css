@@ -57,6 +57,7 @@
 
 .form_details input {
   padding: 0.7rem;
+  font-size: 1.5rem;
   color: var(--secondary-color);
   border: none;
   width: 50%;

@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
+import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// import { config } from 'dotenv'
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -21,3 +20,4 @@ export const app = initializeApp(firebaseConfig);
 // export const analytics = getAnalytics(app);
 export const database = getFirestore(app);
 export const storage = getStorage(app);
+export const auth = getAuth(app);

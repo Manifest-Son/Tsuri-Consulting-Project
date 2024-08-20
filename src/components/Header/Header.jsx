@@ -29,9 +29,14 @@ function Header() {
               </Link>
             </ol>
           </nav>
-          <Link to="/contact">
-            <button>Get in Touch</button>
-          </Link>
+          <div className="buttons">
+            <Link to="/contact">
+              <button>Get in Touch</button>
+            </Link>
+            <Link to="/admin">
+              <button>Login</button>
+            </Link>
+          </div>
         </div>
       </section>
     </React.Fragment>

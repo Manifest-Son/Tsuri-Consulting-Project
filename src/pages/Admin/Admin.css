@@ -8,9 +8,13 @@
   --secondary-shade: #ffffff;
 }
 /* Admin Styling */
-.admin_wrapper {
+/* .admin_wrapper {
   display: flex;
+  flex-direction: column;
   gap: 3rem;
+}
+.admin_nav_links{
+  background: var(--purple_gradient);
 }
 .sidenav {
   width: 20%;
@@ -24,7 +28,7 @@
   width: 100%;
   height: 100vh;
   float: left;
-  /* position: static; */
+  position: static; 
 }
 .sidenav_links {
   text-align: center;
@@ -35,7 +39,7 @@
   display: flex;
   text-transform: uppercase;
   padding: 2rem;
-  /* border: 2px solid green; */
+  /* border: 2px solid green; 
 }
 .sidenav_links li:hover {
   color: #fff;
@@ -49,6 +53,29 @@
 }
 .sidenav_links .title {
   width: 60%;
+} */
+
+/* Admin.css */
+.admin_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.admin_header {
+  flex-shrink: 0;
+  background-color: #f8f8f8; /* Optional: Set your desired background color */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps the header on top while scrolling */
+}
+
+.lower_content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem; /* Optional: Add some padding for the content */
+  background-color: #ffffff; /* Optional: Set your desired background color */
 }
 
 /* Dashboard Styling */

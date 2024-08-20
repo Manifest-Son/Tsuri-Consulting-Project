@@ -16,10 +16,10 @@ function DisplayGallery({ id, image, title, description, onUpdate, onDelete }) {
         <img src={image} alt={title} />
         <h1>{title}</h1>
         <p>{description}</p>
-      </div>
-      <div className="operations">
-        <button onClick={() => onUpdate(id)}>Update</button>
-        <button onClick={() => onDelete(id)}>Delete</button>
+        <div className="operations">
+          <button onClick={() => onUpdate(id)}>Update</button>
+          <button onClick={() => onDelete(id)}>Delete</button>
+        </div>
       </div>
     </section>
   );

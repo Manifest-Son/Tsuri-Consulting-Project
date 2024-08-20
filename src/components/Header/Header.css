@@ -11,6 +11,40 @@
   z-index: 1;
   overflow: hidden;
 }
+.avatar {
+  position: relative;
+  cursor: pointer;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown-menu button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f0f0f0;
+}
 @media screen and (max-width: 46.875em) {
   .header-container {
     display: flex;
@@ -64,4 +98,18 @@
 }
 .header-container button:hover {
   color: #fff;
+}
+
+/* Admin Header Styling */
+.admin_nav_links {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background: var(--purple_gradient);
+}
+.admin_nav_links li {
+  font-weight: 700;
+  color: var(--secondary-color);
 }

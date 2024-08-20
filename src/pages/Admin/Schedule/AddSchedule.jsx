@@ -8,9 +8,11 @@ import { collection, addDoc } from "firebase/firestore";
 import toast from "react-simple-toasts";
 import "react-simple-toasts/dist/theme/success.css";
 import "react-simple-toasts/dist/theme/failure.css";
+import { useNavigate } from "react-router-dom";
 
 function AddSchedule() {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const collectionRef = collection(database, "schedule");
   const validationSchema = Yup.object({
     event: Yup.string().required("The event name is required"),
@@ -41,6 +43,7 @@ function AddSchedule() {
         duration: 3000,
       });
       resetForm();
+      navigate("/admin");
       setLoading(false);
     } catch (err) {
       toast("An Error occured during the submition. Please try again");

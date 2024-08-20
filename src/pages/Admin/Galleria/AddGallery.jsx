@@ -9,9 +9,11 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import toast from "react-simple-toasts";
 import "react-simple-toasts/dist/theme/success.css";
 import "react-simple-toasts/dist/theme/failure.css";
+import { useNavigate } from "react-router-dom";
 
 function AddGallery() {
   const [uploading, setUploading] = useState(false); //Managing our submit states
+  const navigate = useNavigate();
   const collectionRef = collection(database, "gallery"); //Firebase cofiguration
 
   // Setting up validation for our form
@@ -58,6 +60,7 @@ function AddGallery() {
           // console.log();
           toast("Gallery added successfully", { theme: "success" });
           resetForm();
+          navigate("/admin");
           setUploading(false);
         },
       );

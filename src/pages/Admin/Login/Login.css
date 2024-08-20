@@ -1,0 +1,65 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Dancing Script", cursive;
+  --primary-color: #6a0dad;
+  --secondary-color: #ffc300;
+  --purple_gradient: linear-gradient(135deg, #9370db, #4b0082);
+  --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
+  --secondary-shade: #ffffff;
+}
+
+.login_section {
+  /* border: 2px solid green; */
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  display: grid;
+  place-content: center;
+}
+.login_wrapper {
+  width: 50rem;
+  padding: 2rem;
+  /* height: 50rem; */
+  /* border: 2px solid green; */
+  background: var(--purple_gradient);
+  border-radius: 15px;
+}
+.login_section h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.login_section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  /* border: 2px solid green; */
+}
+.login_section label {
+  color: var(--secondary-color);
+}
+.login_section input {
+  width: 70%;
+  padding: 0.7rem;
+  color: var(--secondary-color);
+  border: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+  border-radius: 10px;
+}
+.login_section button {
+  background: var(--gold_gradient);
+  color: var(--secondary-shade);
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 70%;
+}
+.login_section button:hover {
+  background: var(--secondary-shade);
+  color: var(--secondary-color);
+}

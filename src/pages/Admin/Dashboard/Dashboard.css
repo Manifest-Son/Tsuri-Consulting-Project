@@ -11,6 +11,8 @@
 
 /* HomeContact Styling */
 .homecontact_section {
+  display: grid;
+  place-content: center;
   border: 2px solid green;
   font-size: 1.6rem;
   background: var(--purple_color);
@@ -80,6 +82,8 @@
 
 /* MainContact Styling  */
 .maincontact_section {
+  display: grid;
+  place-content: center;
   margin-top: 2rem;
   font-size: 1.6rem;
   border-radius: 10px;
@@ -89,6 +93,8 @@
 
 /* Subscription Styling */
 .subscription_section {
+  display: grid;
+  place-content: center;
   margin-top: 2rem;
   font-size: 1.6rem;
   border: 2px solid var(--secondary-color);
@@ -98,4 +104,21 @@
 .subscription_table {
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
+}
+
+/* Dashboard Styling */
+.dashboard_section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1rem;
+}
+.dashboard_section h1 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+.dashboard_section p {
+  color: var(--secondary-shade);
 }
