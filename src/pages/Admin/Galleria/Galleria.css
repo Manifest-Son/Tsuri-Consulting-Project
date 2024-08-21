@@ -1,41 +1,49 @@
 /* Galleria Styling */
 .galleria_section,
 .updategallery_section {
+  display: grid;
+  place-content: center;
   padding: 2rem;
   font-size: 1.5rem;
   background: var(--purple_gradient);
-}
-.galleria_wrapper {
 }
 .galleria_wrapper form,
 .update_wrapper form {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  width: 70%;
+  width: 100%;
   gap: 1rem;
 }
 .galleria_wrapper label,
 .update_wrapper label {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   font-weight: 600;
 }
 .galleria_wrapper input,
 .update_wrapper input {
   padding: 0.7rem;
+  font-size: 1.5rem;
   border-radius: 10px;
   border: transparent;
   border-bottom: 3px solid var(--secondary-color);
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 .galleria_wrapper textarea,
 .update_wrapper textarea {
   min-height: 7rem;
   font-family: var(--primary-font);
-  color: var(--secondary-color);
+  font-weight: 600;
+  color: var(--primary-color);
   border-radius: 10px;
   border: transparent;
   border-bottom: 3px solid var(--secondary-color);
+}
+.galleria_wrapper p,
+.update_wrapper p {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--secondary-shade);
 }
 .galleria_wrapper button,
 .update_wrapper button {
@@ -53,8 +61,6 @@
 }
 
 /* UpdateGallery Styling */
-.update_wrapper {
-}
 
 /* Display Gallery Styling */
 .galleria_section {

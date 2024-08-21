@@ -56,6 +56,7 @@ function AddSchedule() {
     <>
       <section>
         <div className="scheduler_wrapper">
+          <h1>Add an Event.</h1>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="event">Event:</label>
             <input

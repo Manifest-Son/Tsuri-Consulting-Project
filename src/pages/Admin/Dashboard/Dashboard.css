@@ -8,9 +8,10 @@
   --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
   --secondary-shade: #ffffff;
 }
-
+bodt
 /* HomeContact Styling */
 .homecontact_section {
+  height: 100%;
   display: grid;
   place-content: center;
   border: 2px solid green;
@@ -18,6 +19,8 @@
   background: var(--purple_color);
   border-radius: 10px;
   border-collapse: collapse;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 .homecontact_table tr:nth-child(even),
 .maincontact_table tr:nth-child(even) {
@@ -89,10 +92,13 @@
   border-radius: 10px;
   background: var(--purple_color);
   border-collapse: collapse;
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 
 /* Subscription Styling */
 .subscription_section {
+  height: auto;
   display: grid;
   place-content: center;
   margin-top: 2rem;
@@ -100,6 +106,8 @@
   border: 2px solid var(--secondary-color);
   border-radius: 10px;
   background: var(--purple_color);
+  overflow-x: scroll;
+  overflow-y: scroll;
 }
 .subscription_table {
   border: 2px solid var(--secondary-color);
@@ -108,8 +116,7 @@
 
 /* Dashboard Styling */
 .dashboard_section {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
   gap: 2rem;
   font-size: 1.6rem;
   text-align: center;

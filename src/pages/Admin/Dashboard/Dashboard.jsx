@@ -3,6 +3,7 @@ import React from "react";
 import HomeContact from "./HomeContact";
 import MainContact from "./MainContact";
 import Subscribe from "./Subscribe";
+import "./Dashboard.css";
 
 function Dashboard() {
   return (

@@ -7,75 +7,86 @@
   --gold_gradient: linear-gradient(135deg, #e9c617, #d4af37);
   --secondary-shade: #ffffff;
 }
+
 /* Admin Styling */
-/* .admin_wrapper {
+/* Admin.css */
+.admin_wrapper {
+  display: flex;
+  height: 63vh;
+  gap: 2rem;
+}
+
+.sidenav {
+  width: 20%; /* Ensures the full width if used in a wider layout */
+  border: none; /* Remove border to avoid conflict */
+}
+
+.main_content {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-.admin_nav_links{
-  background: var(--purple_gradient);
-}
-.sidenav {
-  width: 20%;
-}
-.side_content {
   width: 80%;
+  margin-top: 0;
+  padding: 1rem;
+  background-color: var(
+    --secondary-shade
+  ); /* Light background for main content */
+  scrollbar-width: 1rem;
+  /* border: 2px solid green; */
 }
 .sidenav_wrapper {
   background: var(--purple_gradient);
   font-size: 1.5rem;
-  width: 100%;
-  height: 100vh;
-  float: left;
-  position: static; 
+  border: none;
+  scrollbar-width: 1rem;
+  min-height: 63vh;
 }
+
 .sidenav_links {
-  text-align: center;
+  /* text-align: center; */
   color: #ffffff;
   padding: 1rem;
+  list-style: none; /* **Ensure no default list styling** */
+  margin: 0;
 }
+
 .sidenav_links li {
   display: flex;
+  align-items: center; /* **Align items in center for consistency** */
   text-transform: uppercase;
   padding: 2rem;
-  /* border: 2px solid green; 
+  color: var(--secondary-shade);
+  font-weight: 700;
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* **Smooth transition for hover effect** */
 }
+
 .sidenav_links li:hover {
   color: #fff;
   cursor: pointer;
-  background: var(--gold_gradient);
+  border-radius: 10px;
+  background: var(--gold_gradient); /* **Highlight on hover** */
 }
+
 .sidenav_links .icon {
-  width: 40%;
+  width: 20%;
   display: grid;
   place-content: center;
 }
+
 .sidenav_links .title {
-  width: 60%;
-} */
-
-/* Admin.css */
-.admin_wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+  width: 80%;
+  text-decoration: none;
+  /* **Consider adding padding or margin for better spacing if needed** */
 }
-
-.admin_header {
-  flex-shrink: 0;
-  background-color: #f8f8f8; /* Optional: Set your desired background color */
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000; /* Keeps the header on top while scrolling */
-}
-
-.lower_content {
-  flex-grow: 1;
-  overflow-y: auto;
-  padding: 1rem; /* Optional: Add some padding for the content */
-  background-color: #ffffff; /* Optional: Set your desired background color */
+.logout_btn {
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 700;
+  color: var(--secondary-shade);
+  background: var(--secondary-color);
+  justify-items: center;
 }
 
 /* Dashboard Styling */

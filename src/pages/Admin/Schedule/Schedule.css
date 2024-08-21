@@ -8,20 +8,28 @@
   --secondary-shade: #ffffff;
 }
 .scheduler_wrapper {
+  display: grid;
+  place-content: center;
   background: var(--purple_gradient);
   font-size: 1.6rem;
   width: 100%;
   /* border: 2px solid green; */
 }
+.scheduler_wrapper h1 {
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 3rem;
+  padding: 1rem;
+}
 
 .scheduler_wrapper form {
+  width: 70rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 2rem;
-  width: 100%;
-  width: 70%;
   align-self: center;
+  /* border: 2px solid green; */
 }
 .scheduler_wrapper label {
   color: var(--secondary-color);
@@ -48,6 +56,7 @@
 }
 
 /* DisplayScheduler Styling */
+
 .scheduler_display {
   margin: 1rem;
   width: 30rem;
@@ -62,10 +71,19 @@
   padding: 2rem;
   border-radius: 10px;
 }
+.scheduler_display h1 {
+  font-size: 1.7rem;
+}
+.scheduler_display p {
+  font-size: 600;
+  color: var(--secondary-shade);
+}
 .display_scheduler_wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 .scheduler_details,
 .scheduler_operations {
@@ -83,4 +101,28 @@
 .scheduler_operations button:hover {
   background-color: #fff;
   color: var(--primary-color);
+}
+
+/* Scheduler Styling */
+.scheduler_section {
+  background: var(--gold_gradient);
+}
+.scheduler_section {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-color);
+  padding: 1rem;
+}
+.schedulder_btn {
+  background: var(--secondary-shade);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 15px;
+  width: 15%;
+  float: right;
+  margin-right: 2rem;
+  cursor: pointer;
 }

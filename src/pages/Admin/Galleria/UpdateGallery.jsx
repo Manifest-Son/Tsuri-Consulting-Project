@@ -91,7 +91,7 @@ export default function UpdateGallery() {
         duration: 3000,
       });
       resetForm();
-      navigate("/admin"); // Redirect to gallery listing
+      navigate("/admin/galleria"); // Redirect to gallery listing
     } catch (error) {
       console.error("Error updating gallery item:", error);
     } finally {

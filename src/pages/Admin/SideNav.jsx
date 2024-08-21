@@ -2,65 +2,75 @@
 import React from "react";
 import "./Admin.css";
 import { MdDashboard } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../utils/firebase.js";
+import useStore from "../../store/store.js";
 
 function SideNav() {
+  const navigate = useNavigate();
+  const clearUser = useStore((state) => state.clearUser);
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      clearUser();
+      navigate("/login");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
+
   return (
     <>
       <section>
         <div className="sidenav_wrapper">
-          <nav>
-            <ol className="sidenav_links">
-              <Link to="">
+          <div className="side_nav">
+            <nav>
+              <ol className="sidenav_links">
+                <Link to="/admin/dashboard">
+                  <li>
+                    <div className="icon">
+                      <MdDashboard />
+                    </div>
+                    <div className="title">Dashboard</div>
+                  </li>
+                </Link>
+                <Link to="/admin/profile">
+                  <li>
+                    <div className="icon">
+                      <MdDashboard />
+                    </div>
+                    <div className="title">Profile</div>
+                  </li>
+                </Link>
+                <Link to="/admin/galleria">
+                  <li>
+                    <div className="icon">
+                      <MdDashboard />
+                    </div>
+                    <div className="title">Galleria</div>
+                  </li>
+                </Link>
+                <Link to="/admin/scheduler">
+                  <li>
+                    <div className="icon">
+                      <MdDashboard />
+                    </div>
+                    <div className="title">Scheduler</div>
+                  </li>
+                </Link>
                 <li>
                   <div className="icon">
                     <MdDashboard />
                   </div>
-                  <div className="title">Dashboard</div>
-                </li>
-              </Link>
-              <Link to="">
-                <li>
-                  <div className="icon">
-                    <MdDashboard />
+                  <div className="title" onClick={handleLogout}>
+                    Log Out
                   </div>
-                  <div className="title">Profile</div>
                 </li>
-              </Link>
-              <Link to="">
-                <li>
-                  <div className="icon">
-                    <MdDashboard />
-                  </div>
-                  <div className="title">Galleria</div>
-                </li>
-              </Link>
-              <Link to="">
-                <li>
-                  <div className="icon">
-                    <MdDashboard />
-                  </div>
-                  <div className="title">Scheduler</div>
-                </li>
-              </Link>
-              <Link to="">
-                <li>
-                  <div className="icon">
-                    <MdDashboard />
-                  </div>
-                  <div className="title">Mailbox</div>
-                </li>
-              </Link>
-              <Link to="">
-                <li>
-                  <div className="icon">
-                    <MdDashboard />
-                  </div>
-                  <div className="title">Feedback</div>
-                </li>
-              </Link>
-            </ol>
-          </nav>
+              </ol>
+            </nav>
+          </div>
         </div>
       </section>
     </>

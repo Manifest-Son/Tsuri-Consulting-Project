@@ -71,7 +71,7 @@ function FetchSchedule() {
   }, []);
 
   const handleUpdate = (id) => {
-    navigate(`/schedule/update/${id}`);
+    navigate(`/admin/schedule/update/${id}`);
   };
 
   const handleDelete = async (id) => {

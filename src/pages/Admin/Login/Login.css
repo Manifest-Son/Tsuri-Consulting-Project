@@ -11,7 +11,7 @@
 .login_section {
   /* border: 2px solid green; */
   width: 100vw;
-  height: 100vh;
+  height: 63vh;
   font-size: 1.6rem;
   display: grid;
   place-content: center;
@@ -39,9 +39,11 @@
   /* border: 2px solid green; */
 }
 .login_section label {
+  font-size: 1.5rem;
   color: var(--secondary-color);
 }
 .login_section input {
+  font-size: 1.5rem;
   width: 70%;
   padding: 0.7rem;
   color: var(--secondary-color);

@@ -65,7 +65,7 @@ function UpdateSchedule() {
         duration: 3000,
       });
       resetForm();
-      navigate("/admin");
+      navigate("/admin/scheduler");
       setIsSubmitting(false);
     } catch (error) {
       console.error("Error updating schedule item:", {
@@ -87,6 +87,7 @@ function UpdateSchedule() {
     <>
       <section>
         <div className="scheduler_wrapper">
+          <h1>Update an Event.</h1>
           <form onSubmit={formik.handleSubmit}>
             <label htmlFor="event">Event:</label>
             <input
