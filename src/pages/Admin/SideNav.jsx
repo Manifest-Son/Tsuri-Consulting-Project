@@ -2,6 +2,10 @@
 import React from "react";
 import "./Admin.css";
 import { MdDashboard } from "react-icons/md";
+import { FaCalendarDay } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { GrGallery } from "react-icons/gr";
+import { MdLogout } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../utils/firebase.js";
@@ -39,7 +43,7 @@ function SideNav() {
                 <Link to="/admin/profile">
                   <li>
                     <div className="icon">
-                      <MdDashboard />
+                      <CgProfile  />
                     </div>
                     <div className="title">Profile</div>
                   </li>
@@ -47,7 +51,7 @@ function SideNav() {
                 <Link to="/admin/galleria">
                   <li>
                     <div className="icon">
-                      <MdDashboard />
+                      <GrGallery />
                     </div>
                     <div className="title">Galleria</div>
                   </li>
@@ -55,14 +59,14 @@ function SideNav() {
                 <Link to="/admin/scheduler">
                   <li>
                     <div className="icon">
-                      <MdDashboard />
+                      <FaCalendarDay />
                     </div>
                     <div className="title">Scheduler</div>
                   </li>
                 </Link>
                 <li>
                   <div className="icon">
-                    <MdDashboard />
+                    <MdLogout />
                   </div>
                   <div className="title" onClick={handleLogout}>
                     Log Out
