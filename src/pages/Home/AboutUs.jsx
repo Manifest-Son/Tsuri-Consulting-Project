@@ -14,11 +14,11 @@ function AboutUs() {
             <div className="leadership_text">
               <h1>Hear what our founder has to say.</h1>
               <blockquote>
-                Welcome to Tsuri Consultsnta. We pioneer in leadership, academic
-                and career development. Being the founder and the Chief
+                Welcome to Tsuri Consultants. We pioneer in leadership, academic,
+                career development and management consultancy. Being the founder and the Chief
                 Executive Officer of the Consulting firm, i can assure you of
                 our excellence when it comes to our job. We value everyone that
-                allow us to offer our services to them. <br /> You can trust on
+                allow us to offer our services to them. <br /> You can trust
                 us.
               </blockquote>
               <h2>

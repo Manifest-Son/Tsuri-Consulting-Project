@@ -1,46 +1,76 @@
-import "./Services.css";
 import React from "react";
+import "./Services.css";
 import bookImg from "../../assets/Book/book_cover.jpg";
+import { FaStar, FaBookOpen, FaDownload, FaShoppingCart } from 'react-icons/fa';
 
 function Book() {
   return (
-    <React.Fragment>
-      <section className="book_section">
+    <section className="book_section">
+      <div className="book_header">
         <h1>Life On Campus</h1>
-        <div className="book_container">
-          <div className="book_display">
-            <img src={bookImg} alt="Life On Campus Book" />
-          </div>
-          <div className="book_review">
-            <h2>Book Review</h2>
-            <p>
-              Life on campus entails all the activities that happens in all
-              higher insitutions. The boook gives detailed information from high
-              school to campus life within the campus, transition to marketplace
-              and message to guardians/parents on what they need to know about
-              campus, how they are supposed to support and take care of their
-              sons and daughtersin institutions of higher learning.
-              <br />
-              First year on capmus presents a lot of new experiences, new
-              people,, new environment, new activities, new friends, new ways of
-              doing thingsand being away from your parents/guardians. While alot
-              of these new experiences are exciting they can challange your
-              financial, time management kills and academic adjustment.
-              <br />
-              Unlike in High School, you are responsible for deciding what your
-              schedule will hold to manage your time accordingl. You also need
-              to prepare by figuring out how to handle situations and
-              challenging circumstanceswhen they arise.
-              <br />
-              This book captures the positive side of campus life and activities
-              and behaviours you can adjust to make your campus life more
-              memorable and full of fun. If others did it, you can also do it.
-            </p>
-            <button>Purchase the Book.</button>
+        <div className="book_subtitle">Your Complete Guide to University Success</div>
+      </div>
+
+      <div className="book_container">
+        <div className="book_display">
+          <img src={bookImg} alt="Life On Campus Book" />
+          <div className="book_badges">
+            <span>Bestseller</span>
+            <span>Student Choice</span>
           </div>
         </div>
-      </section>
-    </React.Fragment>
+
+        <div className="book_review">
+          <div className="book_rating">
+            <FaStar color="#ffc300" />
+            <FaStar color="#ffc300" />
+            <FaStar color="#ffc300" />
+            <FaStar color="#ffc300" />
+            <FaStar color="#ffc300" />
+            <span>(500+ Reviews)</span>
+          </div>
+
+          <h2>Transform Your Campus Experience</h2>
+
+          <div className="book_highlights">
+            <div className="highlight_item">
+              <FaBookOpen />
+              <span>Complete Campus Guide</span>
+            </div>
+            <div className="highlight_item">
+              <FaDownload />
+              <span>Digital Access Included</span>
+            </div>
+          </div>
+
+          <div className="book_description">
+            <p>
+              From high school transition to career preparation, this comprehensive guide covers:
+            </p>
+            <ul>
+              <li>✓ First Year Survival Skills</li>
+              <li>✓ Time Management Techniques</li>
+              <li>✓ Financial Planning Tips</li>
+              <li>✓ Social Integration Strategies</li>
+              <li>✓ Academic Success Methods</li>
+            </ul>
+          </div>
+
+          <div className="book_cta">
+            <button className="primary_btn">
+              <FaShoppingCart /> Purchase Now
+            </button>
+            <button className="secondary_btn">
+              Preview Chapter
+            </button>
+          </div>
+
+          <div className="book_guarantee">
+            <p>30-Day Money-Back Guarantee</p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

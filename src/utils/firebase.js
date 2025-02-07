@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
@@ -21,3 +21,23 @@ export const app = initializeApp(firebaseConfig);
 export const database = getFirestore(app);
 export const storage = getStorage(app);
 export const auth = getAuth(app);
+
+// Gallery collection reference
+export const galleryCollection = collection(database, 'gallery');
+
+// Helper function to add gallery items
+export const addGalleryItem = async (imageData) => {
+  try {
+    const docRef = await addDoc(galleryCollection, {
+      imageUrl: imageData.imageUrl,
+      title: imageData.title,
+      description: imageData.description,
+      date: imageData.date || serverTimestamp(),
+      createdAt: serverTimestamp(),
+    });
+    return docRef.id;
+  } catch (error) {
+    console.error("Error adding gallery item: ", error);
+    throw error;
+  }
+};

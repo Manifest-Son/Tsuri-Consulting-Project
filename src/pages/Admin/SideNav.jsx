@@ -43,7 +43,7 @@ function SideNav() {
                 <Link to="/admin/profile">
                   <li>
                     <div className="icon">
-                      <CgProfile  />
+                      <CgProfile />
                     </div>
                     <div className="title">Profile</div>
                   </li>
